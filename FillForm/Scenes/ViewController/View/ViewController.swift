@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Storyboarded {
 
     // MARK: Propertise
     @IBOutlet weak var constraintView_Top: NSLayoutConstraint!

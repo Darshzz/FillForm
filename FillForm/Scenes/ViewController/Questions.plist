@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>question</key>
+			<string>Was the entry forced/unforced?</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>option</key>
+					<string>Forced</string>
+					<key>answer</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>option</key>
+					<string>Unforced</string>
+					<key>answer</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>question</key>
+			<string>Mast type</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>option</key>
+					<string>Monopole</string>
+					<key>answer</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>option</key>
+					<string>Lattice</string>
+					<key>answer</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>option</key>
+					<string>Rooftop</string>
+					<key>answer</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>option</key>
+					<string>Other</string>
+					<key>answer</key>
+					<string></string>
+					<key>subAnswer</key>
+					<string>Other mast type</string>
+					<key>subQuestion</key>
+					<string>Enter mast type</string>
+					<key>isText</key>
+					<true/>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please specify the mast type</string>
+					<key>keyboardType</key>
+					<string>text</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>question</key>
+			<string>Were any items damaged?</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>option</key>
+					<string>Yes</string>
+				</dict>
+				<dict>
+					<key>option</key>
+					<string>No</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>question</key>
+			<string>Please select which item is damaged</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>option</key>
+					<string>Raptor</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isCheckBox</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Cable Enclosure</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Company Property</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Mast Door</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Concrete Cube</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Battery</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Container Door</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Container</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>False Floor</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>BTS Infrastructure</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Cable</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Generator</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Gate Padlock</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Generator Battery</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Epoxy</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Steel Battery Unit</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Motion Sensors</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Generator Equipment</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Locking Mechanism</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Private Property</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>CCTV Camera</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Fence</string>
+					<key>isImage</key>
+					<true/>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Other</string>
+					<key>title</key>
+					<string>Please attach the photo of the damaged items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Enter item is damaged</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>question</key>
+			<string>Were any items stolen?</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>option</key>
+					<string>Yes</string>
+				</dict>
+				<dict>
+					<key>option</key>
+					<string>No</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>question</key>
+			<string>Please select which items are stolen</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>AC Power Stable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of AC power cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Aircon</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of aircons stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Assets</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of assets stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>BTS Infrastructure</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of BTS Infrastructure stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Cyber Lock</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of cyber lock stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>DC Cable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of DC cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Diesel</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Amount of diesel stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Fibre Cable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of fibre cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Generator Cable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of generator cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Generator Equipment</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of generator equipment stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Generator Wheels</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of generator wheels stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Mobile Generator</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of mobile generators stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Mobile Generator Battery</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of mobile generator batteries stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>MW Feeder Cable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of MW Feeder cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>NAV Light Cable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of NAV Light cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Private Property</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of private property stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Raptor</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of raptors stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>RF Feeder Cable</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Length of RF Feeder cable stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Site Keys</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of site keys stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Solar Panels</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of solar panels stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Static Generator</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of static generators stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Static Generator Battery</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of static generator batteries stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>VC Lead Battery</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of VC lead batteries stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>VC Lithium Battery</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of VC lithium batteries stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>VC Redflow Battery</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of VC redflow batteries stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>VC Sodium Battery</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>Number of VC sodium batteries stolen</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+				<dict>
+					<key>isCheckBox</key>
+					<true/>
+					<key>option</key>
+					<string>Other</string>
+					<key>title</key>
+					<string>Please attached the photo of the stolen items</string>
+					<key>isImage</key>
+					<true/>
+					<key>isText</key>
+					<true/>
+					<key>subQuestion</key>
+					<string>If other, please specify</string>
+					<key>keyboardType</key>
+					<string>numeric</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>question</key>
+			<string>Please take relevant pictures</string>
+			<key>answer</key>
+			<array>
+				<dict>
+					<key>base64ImageString</key>
+					<string></string>
+					<key>answer</key>
+					<string>no</string>
+					<key>question</key>
+					<string>Picture1</string>
+				</dict>
+				<dict>
+					<key>base64ImageString</key>
+					<string></string>
+					<key>answer</key>
+					<string>no</string>
+					<key>question</key>
+					<string>Picture2</string>
+				</dict>
+				<dict>
+					<key>base64ImageString</key>
+					<string></string>
+					<key>answer</key>
+					<string>no</string>
+					<key>question</key>
+					<string>Picture3</string>
+				</dict>
+				<dict>
+					<key>base64ImageString</key>
+					<string></string>
+					<key>answer</key>
+					<string>no</string>
+					<key>question</key>
+					<string>Picture4</string>
+				</dict>
+				<dict>
+					<key>base64ImageString</key>
+					<string></string>
+					<key>answer</key>
+					<string>no</string>
+					<key>question</key>
+					<string>Picture5</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</array>
+</plist>
