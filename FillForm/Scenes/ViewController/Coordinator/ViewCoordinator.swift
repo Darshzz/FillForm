@@ -19,8 +19,25 @@ class ViewCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         
         let viewController = ViewController.instantiate()
+        bindViewController(viewController)
         navigation.pushViewController(viewController, animated: true)
         
         return .never()
+    }
+    
+    func bindViewController(_ vc: ViewController) {
+        vc.signalPushFormView
+            .subscribe(onNext: { [weak self] _ in
+                self?.pushToFormView()
+            })
+            .disposed(by: disposebag)
+    }
+    
+    private func pushToFormView() {
+        
+        let viewCoordinator = FormCoordinator(navigation: navigation)
+        self.coordinate(to: viewCoordinator)
+            .subscribe()
+            .disposed(by: disposebag)
     }
 }

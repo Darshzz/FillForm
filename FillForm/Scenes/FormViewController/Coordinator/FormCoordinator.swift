@@ -23,10 +23,17 @@ class FormCoordinator: BaseCoordinator<Void> {
         let viewModel = FormViewModel()
         let viewController = FormViewController.instantiate()
         viewController.viewModel = viewModel
-        
+        viewModel.cancelSignal.subscribe(onNext: { [weak self] in
+            self?.popController()
+        })
+            .disposed(by: disposebag)
         
         navigation.pushViewController(viewController, animated: true)
         
         return .never()
+    }
+    
+    private func popController() {
+        navigation.popViewController(animated: true)
     }
 }

@@ -13,7 +13,14 @@ final class FormViewModel {
     
     private let disposeBag = DisposeBag()
     // Observer used to bind with api response
-    var formModel: PublishRelay<FormModel> = .init()
+    var formModel: BehaviorRelay<[[FormModel.QuestionAnswers]]> = .init(value: [])
+    var handleQuestions = PublishSubject<[FormModel.QuestionAnswers]>()
+    var cancelSignal: PublishSubject<()> = .init()
+   
+    private var index = 0
+    var currentFormIndex: Int {
+        return index
+    }
 
     // Get Data From Plist
     func getPlist<T>(_ name: String) -> T? {
@@ -22,6 +29,38 @@ final class FormViewModel {
                return try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? T // [String: Any] which ever it is
         }
         return nil
+    }
+    
+    func increaseIndex() {
+        // Temporary added -2 till last question paper is not set.
+        if index < (formModel.value.count - 2) { index += 1 }
+    }
+    
+    func decreaseIndex() {
+        if index == 0 { return }
+        index -= 1
+    }
+    
+    func updateSelection(_ indexPath: IndexPath) {
+        
+        let questions = formModel.value
+        _ = questions[currentFormIndex][indexPath.section].items.enumerated().map({ (index, value) in
+            
+            value.answer = index == indexPath.row
+        })
+        
+        formModel.accept(questions)
+        handleQuestions.onNext(questions[currentFormIndex])
+    }
+    
+    func updateMultipleSelection(_ indexPath: IndexPath, _ isSelect: Bool) {
+        
+        let questions = formModel.value
+        
+        questions[currentFormIndex][indexPath.section].items[indexPath.row].answer = isSelect
+        
+        formModel.accept(questions)
+        handleQuestions.onNext(questions[currentFormIndex])
     }
 }
 
@@ -34,11 +73,14 @@ extension FormViewModel: ViewModelProtocol {
     }
     
     struct Output {
-        
+        let updateTableViewSignal: Driver<[[FormModel.QuestionAnswers]]>
     }
     
     func transform(_ input: Input, _ outputHandler: @escaping (Output) -> Void) {
         input.disposeBag.insert(setupQuestions(with: input.fetchSignal))
+        
+        let output = Output(updateTableViewSignal: formModel.asDriver(onErrorJustReturn: []))
+        outputHandler(output)
     }
     
     func setupQuestions(with signal: Observable<()>) -> Disposable {
@@ -46,11 +88,9 @@ extension FormViewModel: ViewModelProtocol {
         
         print(result ?? "Unable to serialise fro Plist")
         
-        print(FormModel(data: result!).questionAnswers)
-        
         return signal
-            .flatMap({ () -> Observable<FormModel> in
-                Observable.just(FormModel(data: result!))
+            .flatMap({ () -> Observable<[[FormModel.QuestionAnswers]]> in
+                Observable.just(FormModel(data: result!).questionAnswers)
             })
             .bind(to: formModel)
     }

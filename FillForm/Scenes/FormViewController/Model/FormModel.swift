@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RxDataSources
 
 class FormModel: Codable {
     var questionAnswers: [[QuestionAnswers]]
@@ -23,23 +24,38 @@ class FormModel: Codable {
     }
     
     
-    class QuestionAnswers: Codable {
+    class QuestionAnswers: Codable, AnimatableSectionModelType {
+        
+        //typealias Item = Answers
+        required init(original: FormModel.QuestionAnswers, items: [FormModel.Answers]) {
+            self.items = original.items
+            self.question = original.question
+        }
+        
+        var uuid: UUID = UUID()
+        typealias Identity = UUID
+        var identity: UUID {
+          return uuid //Use this
+        }
+        
+        var items: [FormModel.Answers]
         var question: String
-        var answers: [Answers]
         
         init(data: [String: Any]) {
             
-            answers = []
+            items = []
             question = data["question"] as! String
             
             for value in data["answer"] as! [[String: Any]] {
-                answers.append(Answers(data: value))
+                items.append(Answers(data: value))
             }
         }
     }
     
-    class Answers: Codable {
-        var answer: String?
+    class Answers: Codable, IdentifiableType, Equatable {
+        var cellHeight: Int!
+        var cellType: String!
+        var answer: Bool = false
         var question: String!
         var subAnswer: String?
         var subQuestion: String?
@@ -49,10 +65,18 @@ class FormModel: Codable {
         var title: String?
         var isCheckBox: Bool!
         var keyboardType: Int!
+        
+        var uuid: UUID = UUID()
+        typealias Identity = UUID
+        var identity: Identity {
+          return uuid
+        }
                     
         init(data: [String: Any]) {
-            answer = data["answer"] as? String
-            question = data["question"] as? String
+            cellHeight = (data["cellHeight"] as? Int) ?? 45
+            cellType = data["cellType"] as? String
+            answer = (data["answer"] as? Bool) ?? false
+            question = data["option"] as? String
             subAnswer = data["subAnswer"] as? String
             subQuestion = data["subQuestion"] as? String
             base64ImageString = ""
@@ -61,6 +85,10 @@ class FormModel: Codable {
             title = data["title"] as? String
             isCheckBox = data["isCheckBox"] as? Bool
             keyboardType = data["keyboardType"] as? Int
+        }
+        
+        static func ==(lhs: Answers, rhs: Answers) -> Bool {
+          return lhs.uuid == rhs.uuid
         }
     }
 }

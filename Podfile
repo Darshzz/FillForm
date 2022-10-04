@@ -6,6 +6,7 @@ target 'FillForm' do
   use_frameworks!
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxDataSources'
 
   # Pods for FillForm
 
