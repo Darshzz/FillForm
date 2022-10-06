@@ -15,6 +15,8 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
 
     // MARK:- Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var progressView: ProgressView!
+    
     let fetchSignal: PublishSubject<()> = .init()
     var dataSource: RxTableViewSectionedReloadDataSource<FormModel.QuestionAnswers>?
     
@@ -39,19 +41,6 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
             setUpTableViewObserving(signal: input.updateTableViewSignal)
         ])
     }
-    
-//    private func configureTableView() {
-//        dataSource = RxTableViewSectionedReloadDataSource<FormModel.QuestionAnswers>(configureCell: { dataSource, table, indexPath, item in
-//            return self.createCell(model: item, from: table, indexPath: indexPath)
-//        })
-//
-//        dataSource!.titleForHeaderInSection = { dataSource, index in
-//            return dataSource.sectionModels[index].question
-//        }
-//
-//        viewModel.formModel.bind(to: tableView.rx.items(dataSource: dataSource!))
-//            .disposed(by: disposeBag)
-//    }
     
     private func setUpTableViewObserving(signal: Driver<[[FormModel.QuestionAnswers]]>) -> Disposable {
         
@@ -90,11 +79,15 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
     @IBAction func btnNext_Action(_ sender: Any) {
         viewModel.increaseIndex()
         viewModel.handleQuestions.onNext(viewModel.formModel.value[viewModel.currentFormIndex])
+        
+        progressView.next()
     }
     
     @IBAction func btnPrevious_Action(_ sender: Any) {
         viewModel.decreaseIndex()
         viewModel.handleQuestions.onNext(viewModel.formModel.value[viewModel.currentFormIndex])
+        
+        progressView.previous()
     }
 }
 

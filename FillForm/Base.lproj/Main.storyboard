@@ -67,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VL1-jb-KHQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fin-TF-hli">
                                         <rect key="frame" x="0.0" y="30" width="55" height="45"/>
@@ -97,22 +97,30 @@
                                             <constraint firstAttribute="height" constant="25" id="9b7-fD-Hw6"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32b-JZ-mXb" customClass="ProgressView" customModule="FillForm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70.5" width="414" height="69.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.74901960784313726" green="0.15686274509803921" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="32b-JZ-mXb" secondAttribute="trailing" id="0Dl-Z7-eyo"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fU0-Qr-KzJ" secondAttribute="trailing" constant="20" symbolic="YES" id="1in-cE-trZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="32b-JZ-mXb" secondAttribute="bottom" id="2ah-Kq-dCp"/>
+                                    <constraint firstItem="32b-JZ-mXb" firstAttribute="top" secondItem="fU0-Qr-KzJ" secondAttribute="bottom" constant="5" id="3hd-Wb-8lN"/>
                                     <constraint firstItem="Fin-TF-hli" firstAttribute="leading" secondItem="VL1-jb-KHQ" secondAttribute="leading" id="50G-YM-8c9"/>
                                     <constraint firstItem="gmZ-nc-gwu" firstAttribute="leading" secondItem="VL1-jb-KHQ" secondAttribute="leading" id="6dF-FR-Sb3"/>
                                     <constraint firstItem="fU0-Qr-KzJ" firstAttribute="centerY" secondItem="Fin-TF-hli" secondAttribute="centerY" id="OgZ-KM-cAh"/>
                                     <constraint firstItem="Fin-TF-hli" firstAttribute="top" secondItem="gmZ-nc-gwu" secondAttribute="bottom" constant="5" id="SPy-j9-FYR"/>
-                                    <constraint firstAttribute="height" constant="150" id="UGA-Xb-jTF"/>
+                                    <constraint firstAttribute="height" constant="140" id="UGA-Xb-jTF"/>
                                     <constraint firstItem="fU0-Qr-KzJ" firstAttribute="leading" secondItem="Fin-TF-hli" secondAttribute="trailing" id="Yzg-hI-EM0"/>
                                     <constraint firstAttribute="trailing" secondItem="gmZ-nc-gwu" secondAttribute="trailing" id="Z3d-zU-DfN"/>
                                     <constraint firstItem="gmZ-nc-gwu" firstAttribute="top" secondItem="VL1-jb-KHQ" secondAttribute="top" id="fab-FV-o0q"/>
+                                    <constraint firstItem="32b-JZ-mXb" firstAttribute="leading" secondItem="VL1-jb-KHQ" secondAttribute="leading" id="zhj-bm-0l9"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-rE-ba1">
-                                <rect key="frame" x="0.0" y="150" width="414" height="657"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="667"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioButtonTableCell" rowHeight="45" id="x2N-CM-Jbj" customClass="RadioButtonTableCell" customModule="FillForm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="45"/>
@@ -428,6 +436,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="687-y5-L7x"/>
                     <connections>
+                        <outlet property="progressView" destination="32b-JZ-mXb" id="NT8-ha-taW"/>
                         <outlet property="tableView" destination="B6I-rE-ba1" id="ZnF-Q4-bRG"/>
                     </connections>
                 </viewController>

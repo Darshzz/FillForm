@@ -34,6 +34,11 @@
 		3E8A901328EC0DD700462DA3 /* OtherRadioTextFieldTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A901228EC0DD700462DA3 /* OtherRadioTextFieldTableCell.swift */; };
 		3E8A901528EC1F3500462DA3 /* CheckboxImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A901428EC1F3500462DA3 /* CheckboxImageTableCell.swift */; };
 		3E8A901728EC28E000462DA3 /* CheckboxTextImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A901628EC28E000462DA3 /* CheckboxTextImageTableCell.swift */; };
+		3E8A901B28EEC34400462DA3 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A901A28EEC34300462DA3 /* ProgressView.swift */; };
+		3E8A901D28EEC35800462DA3 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A901C28EEC35800462DA3 /* ProgressView.xib */; };
+		3E8A901F28EED27800462DA3 /* XibContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A901E28EED27800462DA3 /* XibContainer.swift */; };
+		3E8A902128EED34200462DA3 /* UIView+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A902028EED34200462DA3 /* UIView+NSLayoutConstraint.swift */; };
+		3E8A902328EEE54100462DA3 /* Custom+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A902228EEE54100462DA3 /* Custom+UIView.swift */; };
 		8FDBACEFC642270B889D7BB3 /* Pods_FillForm_FillFormUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1CB780350242737778D18B /* Pods_FillForm_FillFormUITests.framework */; };
 		E821FB6FDCBF3E67604B757F /* Pods_FillFormTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB03B088434032B56DA6E42 /* Pods_FillFormTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +94,11 @@
 		3E8A901228EC0DD700462DA3 /* OtherRadioTextFieldTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRadioTextFieldTableCell.swift; sourceTree = "<group>"; };
 		3E8A901428EC1F3500462DA3 /* CheckboxImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxImageTableCell.swift; sourceTree = "<group>"; };
 		3E8A901628EC28E000462DA3 /* CheckboxTextImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxTextImageTableCell.swift; sourceTree = "<group>"; };
+		3E8A901A28EEC34300462DA3 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3E8A901C28EEC35800462DA3 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
+		3E8A901E28EED27800462DA3 /* XibContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibContainer.swift; sourceTree = "<group>"; };
+		3E8A902028EED34200462DA3 /* UIView+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
+		3E8A902228EEE54100462DA3 /* Custom+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Custom+UIView.swift"; sourceTree = "<group>"; };
 		4C119F92C88A683A837291E2 /* Pods-FillForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillForm.release.xcconfig"; path = "Target Support Files/Pods-FillForm/Pods-FillForm.release.xcconfig"; sourceTree = "<group>"; };
 		4E17CAC309AA4D32B7ED6BA1 /* Pods-FillFormTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillFormTests.debug.xcconfig"; path = "Target Support Files/Pods-FillFormTests/Pods-FillFormTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E1F1E86F06015652C7726C4 /* Pods-FillForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillForm.debug.xcconfig"; path = "Target Support Files/Pods-FillForm/Pods-FillForm.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,9 +213,10 @@
 		3E8A8FD728E456B900462DA3 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3E8A901828EEC2A700462DA3 /* Customisation */,
 				3E8A900F28EAE1E800462DA3 /* Extensions */,
 				3E8A8FFB28E5FE3D00462DA3 /* Plist */,
-				3E8A8FF828E586E900462DA3 /* BaseClass */,
+				3E8A8FF828E586E900462DA3 /* SubClass */,
 				3E8A8FEA28E578BA00462DA3 /* Coordinator */,
 				3E8A8FE428E575D200462DA3 /* Protocols */,
 			);
@@ -309,12 +320,13 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		3E8A8FF828E586E900462DA3 /* BaseClass */ = {
+		3E8A8FF828E586E900462DA3 /* SubClass */ = {
 			isa = PBXGroup;
 			children = (
+				3E8A901E28EED27800462DA3 /* XibContainer.swift */,
 				3E8A900428E75A1D00462DA3 /* BaseViewController.swift */,
 			);
-			path = BaseClass;
+			path = SubClass;
 			sourceTree = "<group>";
 		};
 		3E8A8FFB28E5FE3D00462DA3 /* Plist */ = {
@@ -339,9 +351,28 @@
 		3E8A900F28EAE1E800462DA3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3E8A902228EEE54100462DA3 /* Custom+UIView.swift */,
 				3E8A901028EAE1FC00462DA3 /* String+Addition.swift */,
+				3E8A902028EED34200462DA3 /* UIView+NSLayoutConstraint.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E8A901828EEC2A700462DA3 /* Customisation */ = {
+			isa = PBXGroup;
+			children = (
+				3E8A901928EEC2B300462DA3 /* ProgressView */,
+			);
+			path = Customisation;
+			sourceTree = "<group>";
+		};
+		3E8A901928EEC2B300462DA3 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				3E8A901A28EEC34300462DA3 /* ProgressView.swift */,
+				3E8A901C28EEC35800462DA3 /* ProgressView.xib */,
+			);
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 		D9D3AC070D596B65C103F93D /* Frameworks */ = {
@@ -465,6 +496,7 @@
 			files = (
 				3E8A8FFF28E7599300462DA3 /* Questions.plist in Resources */,
 				3E8A8FB328E4442900462DA3 /* LaunchScreen.storyboard in Resources */,
+				3E8A901D28EEC35800462DA3 /* ProgressView.xib in Resources */,
 				3E8A8FB028E4442900462DA3 /* Assets.xcassets in Resources */,
 				3E8A8FAE28E4442300462DA3 /* Main.storyboard in Resources */,
 			);
@@ -606,13 +638,17 @@
 				3E8A8FE728E575F100462DA3 /* ViewModelProtocol.swift in Sources */,
 				3E8A900128E75A0000462DA3 /* ViewCoordinator.swift in Sources */,
 				3E8A900828E75A2B00462DA3 /* BaseCoordinator.swift in Sources */,
+				3E8A902128EED34200462DA3 /* UIView+NSLayoutConstraint.swift in Sources */,
 				3E8A8FE028E457B100462DA3 /* FormModel.swift in Sources */,
 				3E8A8FA928E4442300462DA3 /* SceneDelegate.swift in Sources */,
+				3E8A901F28EED27800462DA3 /* XibContainer.swift in Sources */,
 				3E8A901728EC28E000462DA3 /* CheckboxTextImageTableCell.swift in Sources */,
 				3E8A900328E75A0D00462DA3 /* FormCoordinator.swift in Sources */,
 				3E8A8FF728E5841600462DA3 /* Storyboarded.swift in Sources */,
+				3E8A901B28EEC34400462DA3 /* ProgressView.swift in Sources */,
 				3E8A901128EAE1FC00462DA3 /* String+Addition.swift in Sources */,
 				3E8A900E28E990AE00462DA3 /* RadioButtonTableCell.swift in Sources */,
+				3E8A902328EEE54100462DA3 /* Custom+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
