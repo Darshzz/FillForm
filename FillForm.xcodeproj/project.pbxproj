@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		20685EA3685B2B1C91433216 /* Pods_FillForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF91A26624E5AC11E9C5DE3A /* Pods_FillForm.framework */; };
+		3E2546D628EFEFD300BCECB2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546D528EFEFD300BCECB2 /* ImagePicker.swift */; };
+		3E2546D828EFF30900BCECB2 /* UIApplication+Heriarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546D728EFF30900BCECB2 /* UIApplication+Heriarchy.swift */; };
+		3E2546DA28F0021600BCECB2 /* UIImage+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546D928F0021600BCECB2 /* UIImage+Addition.swift */; };
+		3E2546DE28F0308A00BCECB2 /* GalleryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546DD28F0308900BCECB2 /* GalleryCollectionCell.swift */; };
+		3E2546E028F031D000BCECB2 /* GalleryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546DF28F031D000BCECB2 /* GalleryTableCell.swift */; };
 		3E8A8FA728E4442300462DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FA628E4442300462DA3 /* AppDelegate.swift */; };
 		3E8A8FA928E4442300462DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FA828E4442300462DA3 /* SceneDelegate.swift */; };
 		3E8A8FAB28E4442300462DA3 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FAA28E4442300462DA3 /* FormViewController.swift */; };
@@ -64,6 +69,11 @@
 		052E8B00B9887A39AFA99563 /* Pods-FillFormTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillFormTests.release.xcconfig"; path = "Target Support Files/Pods-FillFormTests/Pods-FillFormTests.release.xcconfig"; sourceTree = "<group>"; };
 		0A1CB780350242737778D18B /* Pods_FillForm_FillFormUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FillForm_FillFormUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0551A862AD2A64294F4AE2 /* Pods-FillForm-FillFormUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillForm-FillFormUITests.release.xcconfig"; path = "Target Support Files/Pods-FillForm-FillFormUITests/Pods-FillForm-FillFormUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E2546D528EFEFD300BCECB2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3E2546D728EFF30900BCECB2 /* UIApplication+Heriarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Heriarchy.swift"; sourceTree = "<group>"; };
+		3E2546D928F0021600BCECB2 /* UIImage+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Addition.swift"; sourceTree = "<group>"; };
+		3E2546DD28F0308900BCECB2 /* GalleryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionCell.swift; sourceTree = "<group>"; };
+		3E2546DF28F031D000BCECB2 /* GalleryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableCell.swift; sourceTree = "<group>"; };
 		3E8A8FA328E4442300462DA3 /* FillForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8A8FA628E4442300462DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8A8FA828E4442300462DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +156,31 @@
 				052E8B00B9887A39AFA99563 /* Pods-FillFormTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E2546D428EFEFB300BCECB2 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				3E2546D528EFEFD300BCECB2 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		3E2546DB28F0305400BCECB2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E2546DC28F0305E00BCECB2 /* CollectionCell */,
+				3E8A900C28E98E9800462DA3 /* TableCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3E2546DC28F0305E00BCECB2 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				3E2546DD28F0308900BCECB2 /* GalleryCollectionCell.swift */,
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 		3E8A8F9A28E4442300462DA3 = {
@@ -235,7 +270,7 @@
 		3E8A8FD928E4570C00462DA3 /* FormViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3E8A900C28E98E9800462DA3 /* TableCells */,
+				3E2546DB28F0305400BCECB2 /* Cells */,
 				3E8A8FF028E581F300462DA3 /* Coordinator */,
 				3E8A8FDC28E4576800462DA3 /* Model */,
 				3E8A8FDB28E4575F00462DA3 /* ViewModel */,
@@ -344,6 +379,7 @@
 				3E8A901228EC0DD700462DA3 /* OtherRadioTextFieldTableCell.swift */,
 				3E8A901428EC1F3500462DA3 /* CheckboxImageTableCell.swift */,
 				3E8A901628EC28E000462DA3 /* CheckboxTextImageTableCell.swift */,
+				3E2546DF28F031D000BCECB2 /* GalleryTableCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -354,6 +390,8 @@
 				3E8A902228EEE54100462DA3 /* Custom+UIView.swift */,
 				3E8A901028EAE1FC00462DA3 /* String+Addition.swift */,
 				3E8A902028EED34200462DA3 /* UIView+NSLayoutConstraint.swift */,
+				3E2546D728EFF30900BCECB2 /* UIApplication+Heriarchy.swift */,
+				3E2546D928F0021600BCECB2 /* UIImage+Addition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +399,7 @@
 		3E8A901828EEC2A700462DA3 /* Customisation */ = {
 			isa = PBXGroup;
 			children = (
+				3E2546D428EFEFB300BCECB2 /* ImagePicker */,
 				3E8A901928EEC2B300462DA3 /* ProgressView */,
 			);
 			path = Customisation;
@@ -635,18 +674,23 @@
 				3E8A8FA728E4442300462DA3 /* AppDelegate.swift in Sources */,
 				3E8A8FDE28E4579C00462DA3 /* FormViewModel.swift in Sources */,
 				3E8A901328EC0DD700462DA3 /* OtherRadioTextFieldTableCell.swift in Sources */,
+				3E2546E028F031D000BCECB2 /* GalleryTableCell.swift in Sources */,
 				3E8A8FE728E575F100462DA3 /* ViewModelProtocol.swift in Sources */,
+				3E2546D828EFF30900BCECB2 /* UIApplication+Heriarchy.swift in Sources */,
 				3E8A900128E75A0000462DA3 /* ViewCoordinator.swift in Sources */,
 				3E8A900828E75A2B00462DA3 /* BaseCoordinator.swift in Sources */,
 				3E8A902128EED34200462DA3 /* UIView+NSLayoutConstraint.swift in Sources */,
 				3E8A8FE028E457B100462DA3 /* FormModel.swift in Sources */,
 				3E8A8FA928E4442300462DA3 /* SceneDelegate.swift in Sources */,
 				3E8A901F28EED27800462DA3 /* XibContainer.swift in Sources */,
+				3E2546DE28F0308A00BCECB2 /* GalleryCollectionCell.swift in Sources */,
+				3E2546DA28F0021600BCECB2 /* UIImage+Addition.swift in Sources */,
 				3E8A901728EC28E000462DA3 /* CheckboxTextImageTableCell.swift in Sources */,
 				3E8A900328E75A0D00462DA3 /* FormCoordinator.swift in Sources */,
 				3E8A8FF728E5841600462DA3 /* Storyboarded.swift in Sources */,
 				3E8A901B28EEC34400462DA3 /* ProgressView.swift in Sources */,
 				3E8A901128EAE1FC00462DA3 /* String+Addition.swift in Sources */,
+				3E2546D628EFEFD300BCECB2 /* ImagePicker.swift in Sources */,
 				3E8A900E28E990AE00462DA3 /* RadioButtonTableCell.swift in Sources */,
 				3E8A902328EEE54100462DA3 /* Custom+UIView.swift in Sources */,
 			);

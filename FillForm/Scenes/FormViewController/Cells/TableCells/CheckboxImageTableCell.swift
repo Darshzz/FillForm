@@ -17,18 +17,14 @@ class CheckboxImageTableCell: UITableViewCell {
     @IBOutlet weak var addImageBtn: UIButton!
     
     var indexPath: IndexPath!
+    lazy var imagePicker = ImagePicker()
+    
     var signalItemSelected: PublishRelay<(IndexPath)>?
     var signalMultipleItemSelected: PublishRelay<(IndexPath, Bool)>? = .init()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     // MARK: Button Action
@@ -37,12 +33,11 @@ class CheckboxImageTableCell: UITableViewCell {
         let image = UIImage(named: currentImage ? "unchecked":"checkbox")
         checkBoxBtn.setImage(image, for: .normal)
         
-        print("current selection status ==== ", !currentImage)
         signalMultipleItemSelected?.accept((indexPath, !currentImage))
     }
     
     @IBAction func btnAddImage_Action(_sender: Any) {
-        
+        imagePicker.openPicker()
     }
 }
 
@@ -53,10 +48,34 @@ extension CheckboxImageTableCell: CellTypeProtocol {
         
         labelText.text = model.question
         
-        print(indexPath)
-        print("Image name === ", model.answer)
-        
         let image = UIImage(named: model.answer ? "checkbox":"unchecked")
         checkBoxBtn.setImage(image, for: .normal)
+        
+        configureAddButtonImage(model)
+        
+        imagePicker.callBackImage = { image in
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                model.base64ImageString = image.base64()
+                
+                DispatchQueue.main.async {
+                    self?.addImageBtn.setImage(image, for: .normal)
+                }
+            }
+        }
+    }
+    
+    private func configureAddButtonImage(_ model: FormModel.Answers) {
+        if !model.base64ImageString!.isEmpty {
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                let data: Data = NSData(base64Encoded: model.base64ImageString!, options: .ignoreUnknownCharacters)! as Data
+                let image = UIImage(data: data)
+                
+                DispatchQueue.main.async {
+                    self?.addImageBtn.setImage(image, for: .normal)
+                }
+            }
+        }else {
+            addImageBtn.setImage(UIImage(named: "captureimage"), for: .normal)
+        }
     }
 }

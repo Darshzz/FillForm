@@ -17,7 +17,10 @@ class CheckboxTextImageTableCell: UITableViewCell {
     @IBOutlet weak var labelsubTitle: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    lazy var imagePicker = ImagePicker()
+    var model: FormModel.Answers!
     var indexPath: IndexPath!
+    
     var signalItemSelected: PublishRelay<(IndexPath)>?
     var signalMultipleItemSelected: PublishRelay<(IndexPath, Bool)>? = .init()
     
@@ -32,11 +35,15 @@ class CheckboxTextImageTableCell: UITableViewCell {
         let image = UIImage(named: currentImage ? "unchecked":"checkbox")
         checkBoxBtn.setImage(image, for: .normal)
         
+        if currentImage {
+            model.base64ImageString = ""
+            addImageBtn.setImage(UIImage(named: "captureimage"), for: .normal)
+        }
         signalMultipleItemSelected?.accept((indexPath, !currentImage))
     }
     
     @IBAction func btnAddImage_Action(_sender: Any) {
-        
+        imagePicker.openPicker()
     }
 
 }
@@ -45,11 +52,44 @@ extension CheckboxTextImageTableCell: CellTypeProtocol {
     
     func configure(_ model: FormModel.Answers, _ indexPath: IndexPath) {
         self.indexPath = indexPath
+        self.model = model
         
         labelText.text = model.question
         
         let image = UIImage(named: model.answer ? "checkbox":"unchecked")
         checkBoxBtn.setImage(image, for: .normal)
+        
+        configureAddButtonImage(model)
+        
+        imagePicker.callBackImage = { image in
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                model.base64ImageString = image.base64()
+                
+                DispatchQueue.main.async {
+                    self?.addImageBtn.setImage(image, for: .normal)
+                }
+            }
+        }
+    }
+    
+    private func configureAddButtonImage(_ model: FormModel.Answers) {
+        if !model.base64ImageString!.isEmpty {
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                let data: Data = NSData(base64Encoded: model.base64ImageString!, options: .ignoreUnknownCharacters)! as Data
+                let image = UIImage(data: data)
+                
+                DispatchQueue.main.async {
+                    self?.addImageBtn.setImage(image, for: .normal)                    
+                }
+            }
+        }else {
+            addImageBtn.setImage(UIImage(named: "captureimage"), for: .normal)
+        }
+    }
+}
 
+extension CheckboxTextImageTableCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        model.subAnswer = textField.text
     }
 }

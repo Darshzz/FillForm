@@ -7,6 +7,7 @@ target 'FillForm' do
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'RxDataSources'
+pod 'IQKeyboardManagerSwift'
 
   # Pods for FillForm
 

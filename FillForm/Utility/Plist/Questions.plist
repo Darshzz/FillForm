@@ -16,7 +16,7 @@
 					<key>option</key>
 					<string>Forced</string>
 					<key>answer</key>
-					<string>no</string>
+					<false/>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -26,7 +26,7 @@
 					<key>option</key>
 					<string>Unforced</string>
 					<key>answer</key>
-					<string>no</string>
+					<false/>
 				</dict>
 			</array>
 		</dict>
@@ -55,7 +55,7 @@
 					<key>option</key>
 					<string>Lattice</string>
 					<key>answer</key>
-					<string></string>
+					<false/>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -65,7 +65,7 @@
 					<key>option</key>
 					<string>Rooftop</string>
 					<key>answer</key>
-					<string></string>
+					<false/>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -75,15 +75,15 @@
 					<key>option</key>
 					<string>Other</string>
 					<key>answer</key>
-					<string></string>
+					<false/>
 					<key>subAnswer</key>
-					<string>Other mast type</string>
+					<string></string>
 					<key>subQuestion</key>
 					<string>Enter mast type</string>
 					<key>isText</key>
 					<true/>
 					<key>isImage</key>
-					<true/>
+					<false/>
 					<key>title</key>
 					<string>Please specify the mast type</string>
 					<key>keyboardType</key>
@@ -132,16 +132,12 @@
 					<string>Please attach the photo of the damaged items</string>
 					<key>isImage</key>
 					<true/>
-					<key>isCheckBox</key>
-					<true/>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Cable Enclosure</string>
 					<key>isImage</key>
@@ -154,8 +150,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Company Property</string>
 					<key>title</key>
@@ -182,8 +176,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Concrete Cube</string>
 					<key>title</key>
@@ -196,8 +188,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Battery</string>
 					<key>isImage</key>
@@ -210,8 +200,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Container Door</string>
 					<key>title</key>
@@ -224,8 +212,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Container</string>
 					<key>isImage</key>
@@ -238,8 +224,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>False Floor</string>
 					<key>title</key>
@@ -252,8 +236,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>BTS Infrastructure</string>
 					<key>isImage</key>
@@ -266,8 +248,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Cable</string>
 					<key>title</key>
@@ -280,8 +260,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Generator</string>
 					<key>isImage</key>
@@ -294,8 +272,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Gate Padlock</string>
 					<key>title</key>
@@ -308,8 +284,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Generator Battery</string>
 					<key>isImage</key>
@@ -322,8 +296,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Epoxy</string>
 					<key>title</key>
@@ -336,8 +308,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Steel Battery Unit</string>
 					<key>isImage</key>
@@ -364,8 +334,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Generator Equipment</string>
 					<key>isImage</key>
@@ -378,8 +346,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Locking Mechanism</string>
 					<key>title</key>
@@ -392,8 +358,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Private Property</string>
 					<key>isImage</key>
@@ -406,8 +370,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>CCTV Camera</string>
 					<key>isImage</key>
@@ -420,8 +382,6 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Fence</string>
 					<key>isImage</key>
@@ -434,15 +394,11 @@
 					<integer>160</integer>
 					<key>cellType</key>
 					<string>CheckboxImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Other</string>
 					<key>title</key>
 					<string>Please attach the photo of the damaged items</string>
 					<key>isImage</key>
-					<true/>
-					<key>isText</key>
 					<true/>
 					<key>subQuestion</key>
 					<string>Enter item is damaged</string>
@@ -484,8 +440,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>AC Power Stable</string>
 					<key>title</key>
@@ -496,6 +450,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of AC power cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -504,8 +460,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Aircon</string>
 					<key>title</key>
@@ -516,6 +470,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of aircons stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -524,8 +480,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Assets</string>
 					<key>title</key>
@@ -536,6 +490,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of assets stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -544,8 +500,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>BTS Infrastructure</string>
 					<key>title</key>
@@ -556,6 +510,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of BTS Infrastructure stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -564,8 +520,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Cyber Lock</string>
 					<key>title</key>
@@ -576,6 +530,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of cyber lock stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -584,8 +540,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>DC Cable</string>
 					<key>title</key>
@@ -596,6 +550,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of DC cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -604,8 +560,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Diesel</string>
 					<key>title</key>
@@ -616,6 +570,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Amount of diesel stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -624,8 +580,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Fibre Cable</string>
 					<key>title</key>
@@ -636,6 +590,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of fibre cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -644,8 +600,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Generator Cable</string>
 					<key>title</key>
@@ -656,6 +610,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of generator cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -664,8 +620,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Generator Equipment</string>
 					<key>title</key>
@@ -676,6 +630,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of generator equipment stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -684,8 +640,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Generator Wheels</string>
 					<key>title</key>
@@ -696,6 +650,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of generator wheels stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -704,8 +660,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Mobile Generator</string>
 					<key>title</key>
@@ -716,6 +670,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of mobile generators stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -724,8 +680,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Mobile Generator Battery</string>
 					<key>title</key>
@@ -736,6 +690,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of mobile generator batteries stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -744,8 +700,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>MW Feeder Cable</string>
 					<key>title</key>
@@ -756,6 +710,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of MW Feeder cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -764,8 +720,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>NAV Light Cable</string>
 					<key>title</key>
@@ -776,6 +730,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of NAV Light cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -784,8 +740,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Private Property</string>
 					<key>title</key>
@@ -796,6 +750,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of private property stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -804,8 +760,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Raptor</string>
 					<key>title</key>
@@ -816,6 +770,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of raptors stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -824,8 +780,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>RF Feeder Cable</string>
 					<key>title</key>
@@ -836,6 +790,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Length of RF Feeder cable stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -844,8 +800,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Site Keys</string>
 					<key>title</key>
@@ -856,6 +810,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of site keys stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -864,8 +820,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Solar Panels</string>
 					<key>title</key>
@@ -876,6 +830,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of solar panels stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -884,8 +840,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Static Generator</string>
 					<key>title</key>
@@ -896,6 +850,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of static generators stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -904,8 +860,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Static Generator Battery</string>
 					<key>title</key>
@@ -916,6 +870,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of static generator batteries stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -924,8 +880,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>VC Lead Battery</string>
 					<key>title</key>
@@ -936,6 +890,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of VC lead batteries stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -944,8 +900,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>VC Lithium Battery</string>
 					<key>title</key>
@@ -956,6 +910,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of VC lithium batteries stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -964,8 +920,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>VC Redflow Battery</string>
 					<key>title</key>
@@ -976,6 +930,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of VC redflow batteries stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -984,8 +940,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>VC Sodium Battery</string>
 					<key>title</key>
@@ -996,6 +950,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>Number of VC sodium batteries stolen</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -1004,8 +960,6 @@
 					<integer>195</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
-					<key>isCheckBox</key>
-					<true/>
 					<key>option</key>
 					<string>Other</string>
 					<key>title</key>
@@ -1016,6 +970,8 @@
 					<true/>
 					<key>subQuestion</key>
 					<string>If other, please specify</string>
+					<key>subAnswer</key>
+					<string></string>
 					<key>keyboardType</key>
 					<string>numeric</string>
 				</dict>
@@ -1601,44 +1557,14 @@
 			<key>answer</key>
 			<array>
 				<dict>
+					<key>answer</key>
+					<true/>
+					<key>cellType</key>
+					<string>GalleryTableCell</string>
+					<key>cellHeight</key>
+					<integer>270</integer>
 					<key>base64ImageString</key>
 					<string></string>
-					<key>answer</key>
-					<string>no</string>
-					<key>question</key>
-					<string>Picture1</string>
-				</dict>
-				<dict>
-					<key>base64ImageString</key>
-					<string></string>
-					<key>answer</key>
-					<string>no</string>
-					<key>question</key>
-					<string>Picture2</string>
-				</dict>
-				<dict>
-					<key>base64ImageString</key>
-					<string></string>
-					<key>answer</key>
-					<string>no</string>
-					<key>question</key>
-					<string>Picture3</string>
-				</dict>
-				<dict>
-					<key>base64ImageString</key>
-					<string></string>
-					<key>answer</key>
-					<string>no</string>
-					<key>question</key>
-					<string>Picture4</string>
-				</dict>
-				<dict>
-					<key>base64ImageString</key>
-					<string></string>
-					<key>answer</key>
-					<string>no</string>
-					<key>question</key>
-					<string>Picture5</string>
 				</dict>
 			</array>
 		</dict>

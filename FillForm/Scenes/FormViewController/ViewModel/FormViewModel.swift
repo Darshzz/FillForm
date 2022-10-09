@@ -31,9 +31,13 @@ final class FormViewModel {
         return nil
     }
     
+    func lastFormPage() -> Bool {
+        return index == (formModel.value.count - 1)
+    }
+    
     func increaseIndex() {
         // Temporary added -2 till last question paper is not set.
-        if index < (formModel.value.count - 2) { index += 1 }
+        if index < (formModel.value.count - 1) { index += 1 }
     }
     
     func decreaseIndex() {
@@ -93,5 +97,40 @@ extension FormViewModel: ViewModelProtocol {
                 Observable.just(FormModel(data: result!).questionAnswers)
             })
             .bind(to: formModel)
+    }
+    
+    func validateFields() -> Bool {
+        var isvalidated = false
+
+        for section in formModel.value[currentFormIndex] {
+            
+            let items = section.items
+            
+            
+            for model in items {
+                // Case 1: if only radio button selection and not selected
+                if !model.isText, !model.isImage, !model.answer {
+                    isvalidated = false
+                // Case 2: if only radio button selection and selected
+                }else if !model.isText, !model.isImage, model.answer {
+                    isvalidated = true
+                    break
+                // Case 3: if only textfield in option
+                }else if model.isText, model.answer, (model.subAnswer ?? "").isEmpty {
+                    isvalidated = false
+                    break
+                }else if model.isImage, model.answer, (model.base64ImageString ?? "").isEmpty {
+                    isvalidated = false
+                    break
+                // Case 3: if both text and image in option
+                }else if model.isText, model.isImage, model.answer, (model.subAnswer ?? "").isEmpty, (model.base64ImageString ?? "").isEmpty {
+                    isvalidated = false
+                    break
+                }else {
+                    isvalidated = true
+                }
+            }
+        }
+        return isvalidated
     }
 }

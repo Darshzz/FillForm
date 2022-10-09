@@ -1,5 +1,6 @@
 PODS:
   - Differentiator (5.0.0)
+  - IQKeyboardManagerSwift (6.5.9)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -12,6 +13,7 @@ PODS:
   - RxSwift (6.5.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Differentiator
+    - IQKeyboardManagerSwift
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -26,11 +29,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 04fe5836c0c3d94502f2b27353a83e64a437266f
+PODFILE CHECKSUM: 30e833e9d25c6e3d1aad29d9a1f69868ff5571f7
 
 COCOAPODS: 1.11.3

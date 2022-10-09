@@ -35,7 +35,6 @@ class RadioButtonTableCell: UITableViewCell {
         radioBtn.setImage(image, for: .normal)
         
         signalItemSelected?.accept(indexPath)
-//        model.answer = !model.answer
     }
 
 }

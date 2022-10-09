@@ -80,8 +80,8 @@ class FormModel: Codable {
             subAnswer = data["subAnswer"] as? String
             subQuestion = data["subQuestion"] as? String
             base64ImageString = ""
-            isText = data["isText"] as? Bool
-            isImage = data["isImage"] as? Bool
+            isText = (data["isText"] as? Bool) ?? false
+            isImage = (data["isImage"] as? Bool) ?? false
             title = data["title"] as? String
             isCheckBox = data["isCheckBox"] as? Bool
             keyboardType = data["keyboardType"] as? Int
