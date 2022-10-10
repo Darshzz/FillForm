@@ -98,8 +98,8 @@
                                             <constraint firstAttribute="height" constant="35" id="9b7-fD-Hw6"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32b-JZ-mXb" customClass="ProgressView" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="85" width="375" height="65"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32b-JZ-mXb" customClass="ProgressView" customModule="FillForm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="83" width="375" height="65"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -243,11 +243,11 @@
                                             <outlet property="textField" destination="YDm-I9-jK7" id="oGy-e9-sEy"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckboxImageTableCell" rowHeight="160" id="HM3-ti-zIM" customClass="CheckboxImageTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="229.5" width="375" height="160"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckboxImageTableCell" rowHeight="180" id="HM3-ti-zIM" customClass="CheckboxImageTableCell" customModule="FillForm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="229.5" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HM3-ti-zIM" id="rWt-l5-fC2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGB-QZ-M2E">
@@ -277,11 +277,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XW-tW-MI4">
-                                                    <rect key="frame" x="65" y="91" width="60" height="60"/>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XW-tW-MI4">
+                                                    <rect key="frame" x="65" y="91" width="80" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="0EY-tn-mw9"/>
-                                                        <constraint firstAttribute="width" constant="60" id="taA-sj-xYg"/>
+                                                        <constraint firstAttribute="height" constant="80" id="0EY-tn-mw9"/>
+                                                        <constraint firstAttribute="width" constant="80" id="taA-sj-xYg"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="captureimage"/>
@@ -316,11 +316,11 @@
                                             <outlet property="labelsubTitle" destination="TKB-aF-VXg" id="NOC-dF-Kw1"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckboxTextImageTableCell" rowHeight="195" id="X22-Qo-iAN" customClass="CheckboxTextImageTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="389.5" width="375" height="195"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckboxTextImageTableCell" rowHeight="220" id="X22-Qo-iAN" customClass="CheckboxTextImageTableCell" customModule="FillForm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="409.5" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X22-Qo-iAN" id="EiO-rK-PZZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="195"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sC-MC-vta">
@@ -345,16 +345,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please attached the photo of the damaged items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-nK-mB8">
-                                                    <rect key="frame" x="65" y="100.5" width="300" height="15.5"/>
+                                                    <rect key="frame" x="65" y="100.5" width="300" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpU-SG-3ma">
-                                                    <rect key="frame" x="65" y="126" width="60" height="60"/>
+                                                    <rect key="frame" x="65" y="131" width="80" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="b94-kT-6Xe"/>
-                                                        <constraint firstAttribute="height" constant="60" id="rbe-L2-0tU"/>
+                                                        <constraint firstAttribute="width" constant="80" id="b94-kT-6Xe"/>
+                                                        <constraint firstAttribute="height" constant="80" id="rbe-L2-0tU"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="captureimage"/>
@@ -416,13 +416,13 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GalleryTableCell" rowHeight="270" id="XzS-iV-nL8" customClass="GalleryTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="584.5" width="375" height="270"/>
+                                        <rect key="frame" x="0.0" y="629.5" width="375" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XzS-iV-nL8" id="KXl-Ix-MUf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ilU-Qj-zGE">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ilU-Qj-zGE">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2dr-jM-MTl">
@@ -435,11 +435,11 @@
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionCell" id="DJ5-Kw-Wz5" customClass="GalleryCollectionCell" customModule="FillForm" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="11" width="100" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3iI-Q4-3HN">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="3iI-Q4-3HN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-2v-e76">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-2v-e76">
                                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="captureimage"/>

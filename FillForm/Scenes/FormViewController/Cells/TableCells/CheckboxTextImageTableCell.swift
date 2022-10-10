@@ -63,10 +63,11 @@ extension CheckboxTextImageTableCell: CellTypeProtocol {
         
         imagePicker.callBackImage = { image in
             DispatchQueue.global(qos: .background).async { [weak self] in
-                model.base64ImageString = image.base64()
+                let resizedImage = image.resizeImage()
+                model.base64ImageString = resizedImage?.base64()
                 
                 DispatchQueue.main.async {
-                    self?.addImageBtn.setImage(image, for: .normal)
+                    self?.addImageBtn.setImage(resizedImage, for: .normal)
                 }
             }
         }

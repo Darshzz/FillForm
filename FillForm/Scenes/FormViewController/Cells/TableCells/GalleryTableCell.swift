@@ -54,7 +54,7 @@ extension GalleryTableCell: UICollectionViewDelegate, UICollectionViewDataSource
         imagePicker.openPicker()
         imagePicker.callBackImage = { [weak self] image in
             if (self?.images.count)! < 5 {
-                self?.images.append(image)
+                self?.images.append(image.resizeImage()!)
     
                 DispatchQueue.main.async {
                     self?.collectionView.reloadData()

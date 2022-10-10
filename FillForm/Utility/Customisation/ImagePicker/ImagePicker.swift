@@ -56,7 +56,7 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as! UIImage
 
-        callBackImage?(UIImage(data: image.jpegData(compressionQuality: 0.25)!)!)
+        callBackImage?(UIImage(data: image.jpegData(compressionQuality: 0.5)!)!)
         UIApplication.currentViewController()?.dismiss(animated:true, completion: nil)
     }
 }
