@@ -42,6 +42,8 @@ extension OtherRadioTextFieldTableCell: CellTypeProtocol {
         self.model = model
         
         labelText.text = model.question
+        textField.text = model.subAnswer
+        textField.placeholder = model.subQuestion
         
         let image = UIImage(named: model.answer ? "radio":"noradio")
         radioBtn.setImage(image, for: .normal)

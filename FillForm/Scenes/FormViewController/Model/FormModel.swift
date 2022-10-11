@@ -56,14 +56,13 @@ class FormModel: Codable {
         var cellHeight: Int!
         var cellType: String!
         var answer: Bool = false
-        var question: String!
+        var question: String = ""
         var subAnswer: String?
         var subQuestion: String?
         var base64ImageString: String? // this will base64 image for now.
         var isText: Bool!
         var isImage: Bool!
         var title: String?
-        var isCheckBox: Bool!
         var keyboardType: Int!
         
         var uuid: UUID = UUID()
@@ -76,15 +75,14 @@ class FormModel: Codable {
             cellHeight = (data["cellHeight"] as? Int) ?? 45
             cellType = data["cellType"] as? String
             answer = (data["answer"] as? Bool) ?? false
-            question = data["option"] as? String
-            subAnswer = data["subAnswer"] as? String
-            subQuestion = data["subQuestion"] as? String
+            question = (data["option"] as? String) ?? ""
+            subAnswer = data["subAnswer"] as? String ?? ""
+            subQuestion = data["subQuestion"] as? String ?? ""
             base64ImageString = ""
             isText = (data["isText"] as? Bool) ?? false
             isImage = (data["isImage"] as? Bool) ?? false
             title = data["title"] as? String
-            isCheckBox = data["isCheckBox"] as? Bool
-            keyboardType = data["keyboardType"] as? Int
+            keyboardType = data["keyboardType"] as? Int ?? 0
         }
         
         static func ==(lhs: Answers, rhs: Answers) -> Bool {

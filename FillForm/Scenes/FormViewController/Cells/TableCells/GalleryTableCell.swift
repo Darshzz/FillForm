@@ -6,17 +6,19 @@
 //
 
 import UIKit
+import RxSwift
 import RxRelay
 
 class GalleryTableCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var signalMultipleImages: PublishSubject<([UIImage])>? = .init()
+    var signalItemSelected: PublishRelay<(IndexPath)>?
+    var signalMultipleItemSelected: PublishRelay<(IndexPath, Bool)>?
+    
     lazy var images: [UIImage] = []
     lazy var imagePicker = ImagePicker()
-    
-    var signalItemSelected: PublishRelay<(IndexPath)>?
-    var signalMultipleItemSelected: PublishRelay<(IndexPath, Bool)>? = .init()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,9 +27,9 @@ class GalleryTableCell: UITableViewCell {
 }
 
 extension GalleryTableCell: CellTypeProtocol {
-    
+
     func configure(_ model: FormModel.Answers, _ indexPath: IndexPath) {
-        
+        print("model === ", model)
     }
 }
 
@@ -52,13 +54,17 @@ extension GalleryTableCell: UICollectionViewDelegate, UICollectionViewDataSource
     
     func selectImage() {
         imagePicker.openPicker()
-        imagePicker.callBackImage = { [weak self] image in
-            if (self?.images.count)! < 5 {
-                self?.images.append(image.resizeImage()!)
+        imagePicker.callBackImage = { [weak self] imageSelected in
+            
+            guard let weakSelf = self else { return }
+            
+            if weakSelf.images.count < 5 {
+                weakSelf.images.append(imageSelected.resizeImage()!)
     
                 DispatchQueue.main.async {
-                    self?.collectionView.reloadData()
+                    weakSelf.collectionView.reloadData()
                 }
+                weakSelf.signalMultipleImages?.onNext(weakSelf.images)
             }
         }
     }

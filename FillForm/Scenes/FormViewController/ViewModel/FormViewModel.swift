@@ -12,6 +12,10 @@ import RxCocoa
 final class FormViewModel {
     
     private let disposeBag = DisposeBag()
+    private var worker: FormViewWorker!
+    // multiples added in last form
+    var multipleImages: [UIImage]!
+    
     // Observer used to bind with api response
     var formModel: BehaviorRelay<[[FormModel.QuestionAnswers]]> = .init(value: [])
     var signalAlertError: PublishSubject<String> = .init()
@@ -21,6 +25,10 @@ final class FormViewModel {
     private var index = 0
     var currentFormIndex: Int {
         return index
+    }
+    
+    init(worker: FormViewWorker) {
+        self.worker = worker
     }
 
     // Get Data From Plist
@@ -74,6 +82,7 @@ extension FormViewModel: ViewModelProtocol {
     struct Input {
         // Input for calling plist data
         let fetchSignal: Observable<()>
+        let postFormSignal: Observable<()>
         let disposeBag: DisposeBag
     }
     
@@ -83,7 +92,8 @@ extension FormViewModel: ViewModelProtocol {
     }
     
     func transform(_ input: Input, _ outputHandler: @escaping (Output) -> Void) {
-        input.disposeBag.insert(setupQuestions(with: input.fetchSignal))
+        input.disposeBag.insert([setupQuestions(with: input.fetchSignal),
+                                 postFormApiCall(with: input.postFormSignal)])
         
         let output = Output(updateTableViewSignal: formModel.asDriver(onErrorJustReturn: []), updateAlertError: signalAlertError.asDriver(onErrorJustReturn: ""))
         outputHandler(output)
@@ -99,6 +109,15 @@ extension FormViewModel: ViewModelProtocol {
                 Observable.just(FormModel(data: result!).questionAnswers)
             })
             .bind(to: formModel)
+    }
+    
+    private func postFormApiCall(with signal: Observable<()>) -> Disposable {
+        
+        signal
+            .subscribe(onNext: { [weak self] _ in
+                guard let weakSelf = self else { return }
+                weakSelf.worker.callApiHere(weakSelf.formModel.value, weakSelf.multipleImages)
+            })
     }
     
     func validateFields() -> Bool {

@@ -56,6 +56,7 @@ extension CheckboxTextImageTableCell: CellTypeProtocol {
         
         labelText.text = model.question
         textField.placeholder = model.subQuestion
+        textField.text = model.subAnswer
         
         let image = UIImage(named: model.answer ? "checkbox":"unchecked")
         checkBoxBtn.setImage(image, for: .normal)

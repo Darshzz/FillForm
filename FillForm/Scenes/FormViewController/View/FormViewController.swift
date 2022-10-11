@@ -19,6 +19,7 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
     @IBOutlet weak var alertView: ToastAlertView!
     
     let fetchSignal: PublishSubject<()> = .init()
+    let postApiSignal: PublishSubject<()> = .init()
     var dataSource: RxTableViewSectionedReloadDataSource<FormModel.QuestionAnswers>?
     
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
     override func setupOutput() {
         super.setupOutput()
         
-        let input = FormViewModel.Input(fetchSignal: fetchSignal, disposeBag: disposeBag)
+        let input = FormViewModel.Input(fetchSignal: fetchSignal, postFormSignal: postApiSignal, disposeBag: disposeBag)
         viewModel.transform(input, setupInput(input:))
     }
 
@@ -76,7 +77,6 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
     private func configureAlertErrorView(signal: Driver<String>) -> Disposable {
         signal
             .drive(with: self, onNext: { (`self`, error) in
-                print("Error message for validations == \n",error)
                 self.alertView.setText(error)
             })
     }
@@ -87,7 +87,13 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
     }
     
     @IBAction func btnNext_Action(_ sender: Any) {
-        guard !viewModel.lastFormPage(), viewModel.validateFields() else { return }
+       // Validiate all fields
+        guard viewModel.validateFields() else { return }
+       // jum to next for if not last page else hit api if last page.
+        guard !viewModel.lastFormPage() else {
+            postApiSignal.onNext(())
+            return
+        }
         
         viewModel.increaseIndex()
         viewModel.handleQuestions.onNext(viewModel.formModel.value[viewModel.currentFormIndex])
@@ -117,6 +123,11 @@ extension FormViewController {
         (cell as! CellTypeProtocol).signalMultipleItemSelected?
             .subscribe(onNext: { [weak self] (indexpath, isSelect) in
                 self?.viewModel.updateMultipleSelection(indexpath, isSelect)
+            })
+            .disposed(by: disposeBag)
+        (cell as! CellTypeProtocol).signalMultipleImages?
+            .subscribe(onNext: { [weak self] images in
+                self?.viewModel.multipleImages = images
             })
             .disposed(by: disposeBag)
         return cell

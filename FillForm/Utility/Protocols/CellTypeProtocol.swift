@@ -7,18 +7,27 @@
 
 import Foundation
 import RxRelay
+import RxSwift
 
-protocol CellTypeProtocol: AnyObject, CellSingleItemSelected, CellMultipleItemSelected {
+protocol CellTypeProtocol: AnyObject {
 
+    // Observe if item is selected with index. Update the tableview
+    var signalItemSelected: PublishRelay<(IndexPath)>? { get set }
+    // Observe if item is selected with index. Update the tableview
+    var signalMultipleItemSelected: PublishRelay<(IndexPath, Bool)>? { get set }
+    // Observe when user adds multiple images.
+    var signalMultipleImages: PublishSubject<([UIImage])>? { get set }
+    
     func configure(_ model: FormModel.Answers, _ indexPath: IndexPath)
 }
 
-protocol CellSingleItemSelected {
-    // Observe if item is selected with index. Update the tableview
-    var signalItemSelected: PublishRelay<(IndexPath)>? { get set }
-}
-
-protocol CellMultipleItemSelected {
-    // Observe if item is selected with index. Update the tableview
-    var signalMultipleItemSelected: PublishRelay<(IndexPath, Bool)>? { get set }
+extension CellTypeProtocol {
+    var signalMultipleImages: PublishSubject<([UIImage])>? {
+        get {
+            return .init()
+        }
+        set {
+            
+        }
+    }
 }

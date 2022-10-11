@@ -13,5 +13,5 @@ struct Constants {
     static let textError = "Please add text for "
     static let imageError = "Please add image for "
     static let imageTextError = "Please add image and text for "
-    
+    static let galleryCellType = "GalleryTableCell"
 }

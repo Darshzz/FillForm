@@ -20,7 +20,7 @@ class FormCoordinator: BaseCoordinator<Void> {
     
     override func start() -> Observable<Void> {
         
-        let viewModel = FormViewModel()
+        let viewModel = FormViewModel(worker: FormViewWorker())
         let viewController = FormViewController.instantiate()
         viewController.viewModel = viewModel
         
