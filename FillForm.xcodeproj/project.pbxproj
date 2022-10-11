@@ -13,6 +13,9 @@
 		3E2546DA28F0021600BCECB2 /* UIImage+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546D928F0021600BCECB2 /* UIImage+Addition.swift */; };
 		3E2546DE28F0308A00BCECB2 /* GalleryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546DD28F0308900BCECB2 /* GalleryCollectionCell.swift */; };
 		3E2546E028F031D000BCECB2 /* GalleryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546DF28F031D000BCECB2 /* GalleryTableCell.swift */; };
+		3E2546E328F541A000BCECB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546E228F5419F00BCECB2 /* Constants.swift */; };
+		3E2546E628F54A1D00BCECB2 /* ToastAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546E528F54A1D00BCECB2 /* ToastAlertView.swift */; };
+		3E2546E828F54A2B00BCECB2 /* ToastAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2546E728F54A2B00BCECB2 /* ToastAlertView.xib */; };
 		3E8A8FA728E4442300462DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FA628E4442300462DA3 /* AppDelegate.swift */; };
 		3E8A8FA928E4442300462DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FA828E4442300462DA3 /* SceneDelegate.swift */; };
 		3E8A8FAB28E4442300462DA3 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FAA28E4442300462DA3 /* FormViewController.swift */; };
@@ -74,6 +77,9 @@
 		3E2546D928F0021600BCECB2 /* UIImage+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Addition.swift"; sourceTree = "<group>"; };
 		3E2546DD28F0308900BCECB2 /* GalleryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionCell.swift; sourceTree = "<group>"; };
 		3E2546DF28F031D000BCECB2 /* GalleryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableCell.swift; sourceTree = "<group>"; };
+		3E2546E228F5419F00BCECB2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3E2546E528F54A1D00BCECB2 /* ToastAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlertView.swift; sourceTree = "<group>"; };
+		3E2546E728F54A2B00BCECB2 /* ToastAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastAlertView.xib; sourceTree = "<group>"; };
 		3E8A8FA328E4442300462DA3 /* FillForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8A8FA628E4442300462DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8A8FA828E4442300462DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +189,23 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
+		3E2546E128F5418D00BCECB2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3E2546E228F5419F00BCECB2 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3E2546E428F549FE00BCECB2 /* ToastAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				3E2546E528F54A1D00BCECB2 /* ToastAlertView.swift */,
+				3E2546E728F54A2B00BCECB2 /* ToastAlertView.xib */,
+			);
+			path = ToastAlertView;
+			sourceTree = "<group>";
+		};
 		3E8A8F9A28E4442300462DA3 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +271,7 @@
 		3E8A8FD728E456B900462DA3 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3E2546E128F5418D00BCECB2 /* Constants */,
 				3E8A901828EEC2A700462DA3 /* Customisation */,
 				3E8A900F28EAE1E800462DA3 /* Extensions */,
 				3E8A8FFB28E5FE3D00462DA3 /* Plist */,
@@ -399,6 +423,7 @@
 		3E8A901828EEC2A700462DA3 /* Customisation */ = {
 			isa = PBXGroup;
 			children = (
+				3E2546E428F549FE00BCECB2 /* ToastAlertView */,
 				3E2546D428EFEFB300BCECB2 /* ImagePicker */,
 				3E8A901928EEC2B300462DA3 /* ProgressView */,
 			);
@@ -538,6 +563,7 @@
 				3E8A901D28EEC35800462DA3 /* ProgressView.xib in Resources */,
 				3E8A8FB028E4442900462DA3 /* Assets.xcassets in Resources */,
 				3E8A8FAE28E4442300462DA3 /* Main.storyboard in Resources */,
+				3E2546E828F54A2B00BCECB2 /* ToastAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +696,7 @@
 				3E8A8FE328E4748E00462DA3 /* ViewController.swift in Sources */,
 				3E8A900928E75A2B00462DA3 /* AppCoordinator.swift in Sources */,
 				3E8A900B28E98D3C00462DA3 /* CellTypeProtocol.swift in Sources */,
+				3E2546E328F541A000BCECB2 /* Constants.swift in Sources */,
 				3E8A8FAB28E4442300462DA3 /* FormViewController.swift in Sources */,
 				3E8A8FA728E4442300462DA3 /* AppDelegate.swift in Sources */,
 				3E8A8FDE28E4579C00462DA3 /* FormViewModel.swift in Sources */,
@@ -689,6 +716,7 @@
 				3E8A900328E75A0D00462DA3 /* FormCoordinator.swift in Sources */,
 				3E8A8FF728E5841600462DA3 /* Storyboarded.swift in Sources */,
 				3E8A901B28EEC34400462DA3 /* ProgressView.swift in Sources */,
+				3E2546E628F54A1D00BCECB2 /* ToastAlertView.swift in Sources */,
 				3E8A901128EAE1FC00462DA3 /* String+Addition.swift in Sources */,
 				3E2546D628EFEFD300BCECB2 /* ImagePicker.swift in Sources */,
 				3E8A900E28E990AE00462DA3 /* RadioButtonTableCell.swift in Sources */,

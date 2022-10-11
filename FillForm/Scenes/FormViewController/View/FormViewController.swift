@@ -16,6 +16,7 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
     // MARK:- Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressView: ProgressView!
+    @IBOutlet weak var alertView: ToastAlertView!
     
     let fetchSignal: PublishSubject<()> = .init()
     var dataSource: RxTableViewSectionedReloadDataSource<FormModel.QuestionAnswers>?
@@ -38,7 +39,8 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
         super.setupInput(input: input)
         
         disposeBag.insert([
-            setUpTableViewObserving(signal: input.updateTableViewSignal)
+            setUpTableViewObserving(signal: input.updateTableViewSignal),
+            configureAlertErrorView(signal: input.updateAlertError)
         ])
     }
     
@@ -71,6 +73,14 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
             .disposed(by: disposeBag)
     }
     
+    private func configureAlertErrorView(signal: Driver<String>) -> Disposable {
+        signal
+            .drive(with: self, onNext: { (`self`, error) in
+                print("Error message for validations == \n",error)
+                self.alertView.setText(error)
+            })
+    }
+    
     // MARK: IBAction Methods
     @IBAction func btnCancel_Action(_ sender: Any) {
         viewModel.cancelSignal.onNext(())
@@ -83,8 +93,6 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
         viewModel.handleQuestions.onNext(viewModel.formModel.value[viewModel.currentFormIndex])
         
         progressView.next()
-        
-        
     }
     
     @IBAction func btnPrevious_Action(_ sender: Any) {

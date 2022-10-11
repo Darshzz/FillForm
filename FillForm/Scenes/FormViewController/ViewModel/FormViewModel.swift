@@ -14,6 +14,7 @@ final class FormViewModel {
     private let disposeBag = DisposeBag()
     // Observer used to bind with api response
     var formModel: BehaviorRelay<[[FormModel.QuestionAnswers]]> = .init(value: [])
+    var signalAlertError: PublishSubject<String> = .init()
     var handleQuestions = PublishSubject<[FormModel.QuestionAnswers]>()
     var cancelSignal: PublishSubject<()> = .init()
    
@@ -78,12 +79,13 @@ extension FormViewModel: ViewModelProtocol {
     
     struct Output {
         let updateTableViewSignal: Driver<[[FormModel.QuestionAnswers]]>
+        let updateAlertError: Driver<String>
     }
     
     func transform(_ input: Input, _ outputHandler: @escaping (Output) -> Void) {
         input.disposeBag.insert(setupQuestions(with: input.fetchSignal))
         
-        let output = Output(updateTableViewSignal: formModel.asDriver(onErrorJustReturn: []))
+        let output = Output(updateTableViewSignal: formModel.asDriver(onErrorJustReturn: []), updateAlertError: signalAlertError.asDriver(onErrorJustReturn: ""))
         outputHandler(output)
     }
     
@@ -102,34 +104,45 @@ extension FormViewModel: ViewModelProtocol {
     func validateFields() -> Bool {
         var isvalidated = false
 
+        var errorMsg = ""
         for section in formModel.value[currentFormIndex] {
             
             let items = section.items
-            
             
             for model in items {
                 // Case 1: if only radio button selection and not selected
                 if !model.isText, !model.isImage, !model.answer {
                     isvalidated = false
+                    errorMsg = Constants.radioSelection
                 // Case 2: if only radio button selection and selected
                 }else if !model.isText, !model.isImage, model.answer {
                     isvalidated = true
+                    errorMsg = ""
                     break
                 // Case 3: if only textfield in option
                 }else if model.isText, model.answer, (model.subAnswer ?? "").isEmpty {
                     isvalidated = false
+                    errorMsg = Constants.textError + model.question
                     break
+                // Case 4: if only image checkbox
                 }else if model.isImage, model.answer, (model.base64ImageString ?? "").isEmpty {
                     isvalidated = false
+                    errorMsg = Constants.imageError + model.question
                     break
-                // Case 3: if both text and image in option
+                // Case 5: if both text and image in option
                 }else if model.isText, model.isImage, model.answer, (model.subAnswer ?? "").isEmpty, (model.base64ImageString ?? "").isEmpty {
                     isvalidated = false
+                    errorMsg = Constants.imageTextError + model.question
                     break
-                }else {
+                }else if model.answer {
                     isvalidated = true
+                    errorMsg = ""
                 }
             }
+        }
+        // Call observer if there is any error to display.
+        if !errorMsg.isEmpty {
+            signalAlertError.onNext(errorMsg)
         }
         return isvalidated
     }
