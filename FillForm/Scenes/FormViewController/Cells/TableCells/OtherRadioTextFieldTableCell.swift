@@ -11,7 +11,7 @@ import RxRelay
 class OtherRadioTextFieldTableCell: UITableViewCell {
     
     // MARK: Properties
-    @IBOutlet weak var radioBtn: UIButton!
+    @IBOutlet weak var imgViewRadio: UIImageView!
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var textField: UITextField!
     
@@ -26,9 +26,9 @@ class OtherRadioTextFieldTableCell: UITableViewCell {
     }
 
     @IBAction func btnRadioSelection_Action(_ sender: Any) {
-        let currentImage = radioBtn.currentImage?.isEqual(UIImage(named: "radio")) ?? false
+        let currentImage = imgViewRadio.image?.isEqual(UIImage(named: "radio")) ?? false
         let image = UIImage(named: currentImage ? "noradio":"radio")
-        radioBtn.setImage(image, for: .normal)
+        imgViewRadio.image = image
         
         signalItemSelected?.accept(indexPath)
     }
@@ -44,9 +44,10 @@ extension OtherRadioTextFieldTableCell: CellTypeProtocol {
         labelText.text = model.question
         textField.text = model.subAnswer
         textField.placeholder = model.subQuestion
+        textField.keyboardType = UIKeyboardType(rawValue: model.keyboardType)!
         
         let image = UIImage(named: model.answer ? "radio":"noradio")
-        radioBtn.setImage(image, for: .normal)
+        imgViewRadio.image = image
     }
 }
 

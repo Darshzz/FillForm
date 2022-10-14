@@ -87,7 +87,7 @@
 					<key>title</key>
 					<string>Please specify the mast type</string>
 					<key>keyboardType</key>
-					<string>text</string>
+					<string>0</string>
 				</dict>
 			</array>
 		</dict>
@@ -453,7 +453,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -473,7 +473,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -493,7 +493,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -513,7 +513,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -533,7 +533,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -553,7 +553,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -573,7 +573,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -593,7 +593,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -613,7 +613,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -633,7 +633,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -653,7 +653,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -673,7 +673,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -693,7 +693,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -713,7 +713,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -733,7 +733,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -753,7 +753,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -773,7 +773,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -793,7 +793,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -813,7 +813,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -833,7 +833,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -853,7 +853,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -873,7 +873,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -893,7 +893,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -913,7 +913,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -933,7 +933,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -953,7 +953,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -973,7 +973,7 @@
 					<key>subAnswer</key>
 					<string></string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1009,7 +1009,7 @@
 			<array>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1025,11 +1025,11 @@
 					<key>subQuestion</key>
 					<string>Length of AC power cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1045,11 +1045,11 @@
 					<key>subQuestion</key>
 					<string>Number of aircons recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1065,11 +1065,11 @@
 					<key>subQuestion</key>
 					<string>Number of assets recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1085,11 +1085,11 @@
 					<key>subQuestion</key>
 					<string>Number of BTS Infrastructure recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1105,11 +1105,11 @@
 					<key>subQuestion</key>
 					<string>Number of cyber lock recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1125,11 +1125,11 @@
 					<key>subQuestion</key>
 					<string>Length of DC cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1145,11 +1145,11 @@
 					<key>subQuestion</key>
 					<string>Amount of diesel recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1165,11 +1165,11 @@
 					<key>subQuestion</key>
 					<string>Length of fibre cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1185,11 +1185,11 @@
 					<key>subQuestion</key>
 					<string>Length of generator cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1205,11 +1205,11 @@
 					<key>subQuestion</key>
 					<string>Number of generator equipment recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1225,11 +1225,11 @@
 					<key>subQuestion</key>
 					<string>Number of generator wheels recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1245,11 +1245,11 @@
 					<key>subQuestion</key>
 					<string>Number of mobile generators recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1265,11 +1265,11 @@
 					<key>subQuestion</key>
 					<string>Number of mobile generator batteries recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1285,11 +1285,11 @@
 					<key>subQuestion</key>
 					<string>Length of MW Feeder cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1305,11 +1305,11 @@
 					<key>subQuestion</key>
 					<string>Length of NAV Light cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1325,11 +1325,11 @@
 					<key>subQuestion</key>
 					<string>Number of private property recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1345,11 +1345,11 @@
 					<key>subQuestion</key>
 					<string>Number of raptors recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1365,11 +1365,11 @@
 					<key>subQuestion</key>
 					<string>Length of RF Feeder cable recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1385,11 +1385,11 @@
 					<key>subQuestion</key>
 					<string>Number of site keys recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1405,11 +1405,11 @@
 					<key>subQuestion</key>
 					<string>Number of solar panels recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1425,11 +1425,11 @@
 					<key>subQuestion</key>
 					<string>Number of static generators recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1445,11 +1445,11 @@
 					<key>subQuestion</key>
 					<string>Number of static generator batteries recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1465,11 +1465,11 @@
 					<key>subQuestion</key>
 					<string>Number of VC lead batteries stolen</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1485,11 +1485,11 @@
 					<key>subQuestion</key>
 					<string>Number of VC lithium batteries recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1505,11 +1505,11 @@
 					<key>subQuestion</key>
 					<string>Number of VC redflow batteries recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1525,11 +1525,11 @@
 					<key>subQuestion</key>
 					<string>Number of VC sodium batteries recovered</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
-					<integer>195</integer>
+					<integer>220</integer>
 					<key>cellType</key>
 					<string>CheckboxTextImageTableCell</string>
 					<key>isCheckBox</key>
@@ -1545,7 +1545,7 @@
 					<key>subQuestion</key>
 					<string>If other, please specify</string>
 					<key>keyboardType</key>
-					<string>numeric</string>
+					<integer>4</integer>
 				</dict>
 			</array>
 		</dict>

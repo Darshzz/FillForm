@@ -11,7 +11,7 @@ import RxRelay
 class CheckboxTextImageTableCell: UITableViewCell {
 
     // MARK: Properties
-    @IBOutlet weak var checkBoxBtn: UIButton!
+    @IBOutlet weak var imgViewCheckBox: UIImageView!
     @IBOutlet weak var addImageBtn: UIButton!
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var labelsubTitle: UILabel!
@@ -31,9 +31,9 @@ class CheckboxTextImageTableCell: UITableViewCell {
     
     // MARK: Button Action
     @IBAction func btnCheckboxSelection_Action(_ sender: Any) {
-        let currentImage = checkBoxBtn.currentImage?.isEqual(UIImage(named: "checkbox")) ?? false
+        let currentImage = imgViewCheckBox.image?.isEqual(UIImage(named: "checkbox")) ?? false
         let image = UIImage(named: currentImage ? "unchecked":"checkbox")
-        checkBoxBtn.setImage(image, for: .normal)
+        imgViewCheckBox.image = image
         
         if currentImage {
             model.base64ImageString = ""
@@ -57,9 +57,11 @@ extension CheckboxTextImageTableCell: CellTypeProtocol {
         labelText.text = model.question
         textField.placeholder = model.subQuestion
         textField.text = model.subAnswer
+        textField.keyboardType = UIKeyboardType(rawValue: model.keyboardType)!
+        labelsubTitle.text = model.title
         
         let image = UIImage(named: model.answer ? "checkbox":"unchecked")
-        checkBoxBtn.setImage(image, for: .normal)
+        imgViewCheckBox.image = image
         
         configureAddButtonImage(model)
         
