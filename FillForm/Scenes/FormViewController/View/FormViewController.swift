@@ -14,6 +14,7 @@ import RxDataSources
 class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
 
     // MARK:- Properties
+    @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var progressView: ProgressView!
     @IBOutlet weak var alertView: ToastAlertView!
@@ -81,6 +82,12 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
             })
     }
     
+    private func updateButtonUI(_ isSubmit: Bool) {
+        
+        btnNext.setTitle(isSubmit ? Constants.submit : Constants.next, for: .normal)
+        btnNext.backgroundColor = isSubmit ? #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1) : #colorLiteral(red: 0.8171867132, green: 0.00278799003, blue: 0.01103944983, alpha: 1)
+    }
+    
     // MARK: IBAction Methods
     @IBAction func btnCancel_Action(_ sender: Any) {
         viewModel.cancelSignal.onNext(())
@@ -97,8 +104,10 @@ class FormViewController: BaseViewController<FormViewModel>, Storyboarded {
         
         viewModel.increaseIndex()
         viewModel.handleQuestions.onNext(viewModel.formModel.value[viewModel.currentFormIndex])
-        
+
         progressView.next()
+        
+        updateButtonUI(viewModel.lastFormPage())
     }
     
     @IBAction func btnPrevious_Action(_ sender: Any) {
@@ -128,6 +137,7 @@ extension FormViewController {
         (cell as! CellTypeProtocol).signalMultipleImages?
             .subscribe(onNext: { [weak self] images in
                 self?.viewModel.multipleImages = images
+                self?.updateButtonUI(images.count < Constants.minImageCount)
             })
             .disposed(by: disposeBag)
         return cell
@@ -135,6 +145,13 @@ extension FormViewController {
 }
 
 extension FormViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+           if let header = view as? UITableViewHeaderFooterView {
+               header.backgroundView?.backgroundColor = UIColor.green
+               header.textLabel?.textColor = .black
+           }
+       }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

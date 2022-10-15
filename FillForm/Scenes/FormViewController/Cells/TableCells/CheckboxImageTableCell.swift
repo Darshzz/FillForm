@@ -29,11 +29,11 @@ class CheckboxImageTableCell: UITableViewCell {
     
     // MARK: Button Action
     @IBAction func btnCheckboxSelection_Action(_ sender: Any) {
-        let currentImage = imgViewCheckBox.image?.isEqual(UIImage(named: "checkbox")) ?? false
-        let image = UIImage(named: currentImage ? "unchecked":"checkbox")
+        let isChecked = imgViewCheckBox.image?.isEqual(UIImage(named: Constants.checkbox)) ?? false
+        let image = UIImage(named: isChecked ? Constants.checkbox : Constants.unchecked)
         imgViewCheckBox.image = image
         
-        signalMultipleItemSelected?.accept((indexPath, !currentImage))
+        signalMultipleItemSelected?.accept((indexPath, !isChecked))
     }
     
     @IBAction func btnAddImage_Action(_sender: Any) {
@@ -49,7 +49,7 @@ extension CheckboxImageTableCell: CellTypeProtocol {
         labelText.text = model.question
         labelsubTitle.text = model.title
         
-        let image = UIImage(named: model.answer ? "checkbox":"unchecked")
+        let image = UIImage(named: model.answer ? Constants.checkbox : Constants.unchecked)
         imgViewCheckBox.image = image
         
         configureAddButtonImage(model)
@@ -77,7 +77,7 @@ extension CheckboxImageTableCell: CellTypeProtocol {
                 }
             }
         }else {
-            addImageBtn.setImage(UIImage(named: "captureimage"), for: .normal)
+            addImageBtn.setImage(UIImage(named: Constants.placeHolderAddImage), for: .normal)
         }
     }
 }

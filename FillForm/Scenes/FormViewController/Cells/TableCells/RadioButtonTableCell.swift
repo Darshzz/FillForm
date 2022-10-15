@@ -30,8 +30,8 @@ class RadioButtonTableCell: UITableViewCell {
     }
     
     @IBAction func btnRadioSelection_Action(_ sender: Any) {
-        let currentImage = imgViewRadio.image?.isEqual(UIImage(named: "radio")) ?? false
-        let image = UIImage(named: currentImage ? "noradio":"radio")
+        let currentImage = imgViewRadio.image?.isEqual(UIImage(named: Constants.radio)) ?? false
+        let image = UIImage(named: currentImage ? Constants.radio : Constants.noradio)
         imgViewRadio.image = image
         
         signalItemSelected?.accept(indexPath)
@@ -46,7 +46,7 @@ extension RadioButtonTableCell: CellTypeProtocol {
         
         labelText.text = model.question
         
-        let image = UIImage(named: model.answer ? "radio":"noradio")
+        let image = UIImage(named: model.answer ? Constants.radio : Constants.noradio)
         imgViewRadio.image = image
     }
 }

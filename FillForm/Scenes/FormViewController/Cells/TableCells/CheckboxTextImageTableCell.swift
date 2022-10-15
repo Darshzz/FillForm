@@ -31,19 +31,22 @@ class CheckboxTextImageTableCell: UITableViewCell {
     
     // MARK: Button Action
     @IBAction func btnCheckboxSelection_Action(_ sender: Any) {
-        let currentImage = imgViewCheckBox.image?.isEqual(UIImage(named: "checkbox")) ?? false
-        let image = UIImage(named: currentImage ? "unchecked":"checkbox")
-        imgViewCheckBox.image = image
-        
-        if currentImage {
-            model.base64ImageString = ""
-            addImageBtn.setImage(UIImage(named: "captureimage"), for: .normal)
+        let isChecked = imgViewCheckBox.image?.isEqual(UIImage(named: Constants.checkbox)) ?? false
+        // If already checked then user is unchecking it thats why bool is true then remove all existing fields
+        if isChecked {
+            resetFieldsIfUnchecked()
         }
-        signalMultipleItemSelected?.accept((indexPath, !currentImage))
+        signalMultipleItemSelected?.accept((indexPath, !isChecked))
     }
     
     @IBAction func btnAddImage_Action(_sender: Any) {
         imagePicker.openPicker()
+    }
+    
+    private func resetFieldsIfUnchecked() {
+        model.subAnswer = ""
+        model.base64ImageString = ""
+        addImageBtn.setImage(UIImage(named: Constants.placeHolderAddImage), for: .normal)
     }
 
 }
@@ -60,7 +63,7 @@ extension CheckboxTextImageTableCell: CellTypeProtocol {
         textField.keyboardType = UIKeyboardType(rawValue: model.keyboardType)!
         labelsubTitle.text = model.title
         
-        let image = UIImage(named: model.answer ? "checkbox":"unchecked")
+        let image = UIImage(named: model.answer ? Constants.checkbox : Constants.unchecked)
         imgViewCheckBox.image = image
         
         configureAddButtonImage(model)
@@ -88,7 +91,7 @@ extension CheckboxTextImageTableCell: CellTypeProtocol {
                 }
             }
         }else {
-            addImageBtn.setImage(UIImage(named: "captureimage"), for: .normal)
+            addImageBtn.setImage(UIImage(named: Constants.placeHolderAddImage), for: .normal)
         }
     }
 }

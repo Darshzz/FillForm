@@ -29,7 +29,6 @@ class GalleryTableCell: UITableViewCell {
 extension GalleryTableCell: CellTypeProtocol {
 
     func configure(_ model: FormModel.Answers, _ indexPath: IndexPath) {
-        print("model === ", model)
     }
 }
 

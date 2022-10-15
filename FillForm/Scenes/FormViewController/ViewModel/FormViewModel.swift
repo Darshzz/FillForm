@@ -14,7 +14,7 @@ final class FormViewModel {
     private let disposeBag = DisposeBag()
     private var worker: FormViewWorker!
     // multiples added in last form
-    var multipleImages: [UIImage]!
+    lazy var multipleImages: [UIImage]! = []
     
     // Observer used to bind with api response
     var formModel: BehaviorRelay<[[FormModel.QuestionAnswers]]> = .init(value: [])
@@ -54,12 +54,25 @@ final class FormViewModel {
         index -= 1
     }
     
+    func removeAllSelection() {
+        _ = formModel.value[currentFormIndex][1].items.map({ value in
+            value.answer = false
+            value.subAnswer = ""
+            value.base64ImageString = ""
+        })
+    }
+    
     func updateSelection(_ indexPath: IndexPath) {
         
         let questions = formModel.value
-        _ = questions[currentFormIndex][indexPath.section].items.enumerated().map({ (index, value) in
+        _ = questions[currentFormIndex][indexPath.section].items.enumerated().map({ [weak self] (index, value) in
             
             value.answer = index == indexPath.row
+            
+            // Check if user has selected no then remove all checkbox for section 4 and 5.
+            if value.question.lowercased() == Constants.no, questions[currentFormIndex].count > 1, value.answer {
+                self?.removeAllSelection()
+            }
         })
         
         formModel.accept(questions)
@@ -100,7 +113,7 @@ extension FormViewModel: ViewModelProtocol {
     }
     
     func setupQuestions(with signal: Observable<()>) -> Disposable {
-        let result: [[Any]]? = getPlist("Questions")
+        let result: [[Any]]? = getPlist(Constants.plist)
         
         print(result ?? "Unable to serialise fro Plist")
         
@@ -158,6 +171,10 @@ extension FormViewModel: ViewModelProtocol {
                     errorMsg = ""
                 }
             }
+        }
+        if lastFormPage(), multipleImages.count < Constants.minImageCount {
+            isvalidated = false
+            errorMsg = Constants.multipleImages
         }
         // Call observer if there is any error to display.
         if !errorMsg.isEmpty {

@@ -11,7 +11,7 @@ import UIKit
 struct FormViewWorker {
     
     func callApiHere(_ formModel: [[FormModel.QuestionAnswers]], _ images: [UIImage]) {
-//        print(prepareJson(formModel, images))
+        print(prepareJson(formModel, images))
     }
 }
 
@@ -20,13 +20,13 @@ extension FormViewWorker {
     
     func prepareJson(_ formModel: [[FormModel.QuestionAnswers]], _ images: [UIImage]) -> [String : Any] {
         
-        var selectedAnswer = [[:]]
+        var selectedAnswer: [Any] = []
         for section in formModel {
             
             for model in section {
                 
                 let answers = model.items.filter({ $0.answer })
-                var items = [[:]]
+                var items: [Any] = []
                 answers.forEach { model in
                     if model.cellType == Constants.galleryCellType {
                         images.enumerated().forEach { (index, image) in
