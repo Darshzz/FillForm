@@ -98,8 +98,8 @@
                                             <constraint firstAttribute="height" constant="35" id="9b7-fD-Hw6"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32b-JZ-mXb" customClass="ProgressView" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="65"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32b-JZ-mXb" customClass="ProgressView" customModule="FillForm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="83" width="390" height="65"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -107,10 +107,10 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="32b-JZ-mXb" secondAttribute="trailing" id="0Dl-Z7-eyo"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fU0-Qr-KzJ" secondAttribute="trailing" constant="20" symbolic="YES" id="1in-cE-trZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="32b-JZ-mXb" secondAttribute="bottom" id="2ah-Kq-dCp"/>
+                                    <constraint firstAttribute="bottom" secondItem="32b-JZ-mXb" secondAttribute="bottom" constant="2" id="2ah-Kq-dCp"/>
                                     <constraint firstItem="Fin-TF-hli" firstAttribute="leading" secondItem="VL1-jb-KHQ" secondAttribute="leading" id="50G-YM-8c9"/>
                                     <constraint firstItem="gmZ-nc-gwu" firstAttribute="leading" secondItem="VL1-jb-KHQ" secondAttribute="leading" id="6dF-FR-Sb3"/>
-                                    <constraint firstItem="32b-JZ-mXb" firstAttribute="top" secondItem="Fin-TF-hli" secondAttribute="bottom" id="LFY-lF-dW2"/>
+                                    <constraint firstItem="32b-JZ-mXb" firstAttribute="top" secondItem="Fin-TF-hli" secondAttribute="bottom" constant="-2" id="LFY-lF-dW2"/>
                                     <constraint firstItem="fU0-Qr-KzJ" firstAttribute="centerY" secondItem="Fin-TF-hli" secondAttribute="centerY" id="OgZ-KM-cAh"/>
                                     <constraint firstItem="Fin-TF-hli" firstAttribute="top" secondItem="gmZ-nc-gwu" secondAttribute="bottom" constant="5" id="SPy-j9-FYR"/>
                                     <constraint firstAttribute="height" constant="150" id="UGA-Xb-jTF"/>
@@ -123,8 +123,59 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-rE-ba1">
                                 <rect key="frame" x="0.0" y="150" width="390" height="605"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextFieldTableCell" rowHeight="100" id="7eM-yb-nI6" customClass="TextFieldTableCell" customModule="FillForm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7eM-yb-nI6" id="gDj-ZL-4bh">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Technician " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ko7-55-bYq">
+                                                    <rect key="frame" x="12" y="5" width="366" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name of technician" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ORw-kj-hpO">
+                                                    <rect key="frame" x="12" y="53" width="366" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="sPx-qM-FTI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="7eM-yb-nI6" id="cQw-kT-puA"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ORw-kj-hpO" secondAttribute="bottom" constant="7" id="FBR-gL-maX"/>
+                                                <constraint firstItem="ORw-kj-hpO" firstAttribute="trailing" secondItem="ko7-55-bYq" secondAttribute="trailing" id="Rsz-YY-TaH"/>
+                                                <constraint firstItem="ORw-kj-hpO" firstAttribute="top" secondItem="ko7-55-bYq" secondAttribute="bottom" constant="5" id="Rzg-8P-4Aa"/>
+                                                <constraint firstItem="ko7-55-bYq" firstAttribute="leading" secondItem="gDj-ZL-4bh" secondAttribute="leading" constant="12" id="Y3z-s5-0Tb"/>
+                                                <constraint firstItem="ORw-kj-hpO" firstAttribute="leading" secondItem="ko7-55-bYq" secondAttribute="leading" id="ipo-ul-1iJ"/>
+                                                <constraint firstItem="ko7-55-bYq" firstAttribute="top" secondItem="gDj-ZL-4bh" secondAttribute="top" constant="5" id="j68-YI-sXd"/>
+                                                <constraint firstAttribute="trailing" secondItem="ko7-55-bYq" secondAttribute="trailing" constant="12" id="wEn-Ae-mDS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelText" destination="ko7-55-bYq" id="hqx-Ti-I0I"/>
+                                            <outlet property="textField" destination="ORw-kj-hpO" id="wLr-Vv-LNO"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioButtonTableCell" rowHeight="45" id="x2N-CM-Jbj" customClass="RadioButtonTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="45"/>
+                                        <rect key="frame" x="0.0" y="144.66666603088379" width="390" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x2N-CM-Jbj" id="Wpc-ma-B4n">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="45"/>
@@ -173,23 +224,12 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OtherRadioTextFieldTableCell" rowHeight="140" id="4h5-HE-2MX" customClass="OtherRadioTextFieldTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="89.666666030883789" width="390" height="140"/>
+                                        <rect key="frame" x="0.0" y="189.66666603088379" width="390" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4h5-HE-2MX" id="kgE-S7-edr">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVa-Ky-H6l">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="1Ln-tw-RnD"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain"/>
-                                                    <connections>
-                                                        <action selector="btnRadioSelection_Action:" destination="4h5-HE-2MX" eventType="touchUpInside" id="T2K-Hr-p7a"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noradio" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-lp-Tep">
                                                     <rect key="frame" x="10" y="10" width="30" height="30"/>
                                                     <constraints>
@@ -206,6 +246,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVa-Ky-H6l">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="1Ln-tw-RnD"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="btnRadioSelection_Action:" destination="4h5-HE-2MX" eventType="touchUpInside" id="T2K-Hr-p7a"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please specify the mast type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7B-2b-84s">
                                                     <rect key="frame" x="5" y="55" width="375" height="21"/>
                                                     <constraints>
@@ -260,7 +311,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckboxImageTableCell" rowHeight="180" id="HM3-ti-zIM" customClass="CheckboxImageTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="229.66666603088379" width="390" height="180"/>
+                                        <rect key="frame" x="0.0" y="329.66666603088379" width="390" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HM3-ti-zIM" id="rWt-l5-fC2">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="180"/>
@@ -293,7 +344,7 @@
                                                         <action selector="btnCheckboxSelection_Action:" destination="HM3-ti-zIM" eventType="touchUpInside" id="uOf-Q5-LHm"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please attached the photo of the damaged items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKB-aF-VXg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please attached the photo of the damaged items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TKB-aF-VXg">
                                                     <rect key="frame" x="50" y="60" width="330" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="vf7-ND-EnY"/>
@@ -345,7 +396,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CheckboxTextImageTableCell" rowHeight="220" id="X22-Qo-iAN" customClass="CheckboxTextImageTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="409.66666603088379" width="390" height="220"/>
+                                        <rect key="frame" x="0.0" y="509.66666603088379" width="390" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X22-Qo-iAN" id="EiO-rK-PZZ">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="220"/>
@@ -378,7 +429,7 @@
                                                         <action selector="btnCheckboxSelection_Action:" destination="X22-Qo-iAN" eventType="touchUpInside" id="Vw2-He-Vf8"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please attached the photo of the damaged items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-nK-mB8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please attached the photo of the damaged items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eG7-nK-mB8">
                                                     <rect key="frame" x="50" y="100.66666666666667" width="330" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.329999999999998" id="BoR-2l-6CO"/>
@@ -456,13 +507,13 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GalleryTableCell" rowHeight="270" id="XzS-iV-nL8" customClass="GalleryTableCell" customModule="FillForm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="629.66666603088379" width="390" height="270"/>
+                                        <rect key="frame" x="0.0" y="729.66666603088379" width="390" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XzS-iV-nL8" id="KXl-Ix-MUf">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ilU-Qj-zGE">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ilU-Qj-zGE">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="270"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2dr-jM-MTl">
@@ -475,11 +526,11 @@
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionCell" id="DJ5-Kw-Wz5" customClass="GalleryCollectionCell" customModule="FillForm" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="11" width="100" height="100"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3iI-Q4-3HN">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="3iI-Q4-3HN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-2v-e76">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUe-2v-e76">
                                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="captureimage"/>

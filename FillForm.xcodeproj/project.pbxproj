@@ -17,6 +17,7 @@
 		3E2546E628F54A1D00BCECB2 /* ToastAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546E528F54A1D00BCECB2 /* ToastAlertView.swift */; };
 		3E2546E828F54A2B00BCECB2 /* ToastAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E2546E728F54A2B00BCECB2 /* ToastAlertView.xib */; };
 		3E2546EB28F55A9200BCECB2 /* FormViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2546EA28F55A9200BCECB2 /* FormViewWorker.swift */; };
+		3E673B1D29168024002BFF30 /* TextFieldTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E673B1C29168024002BFF30 /* TextFieldTableCell.swift */; };
 		3E8A8FA728E4442300462DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FA628E4442300462DA3 /* AppDelegate.swift */; };
 		3E8A8FA928E4442300462DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FA828E4442300462DA3 /* SceneDelegate.swift */; };
 		3E8A8FAB28E4442300462DA3 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A8FAA28E4442300462DA3 /* FormViewController.swift */; };
@@ -82,6 +83,7 @@
 		3E2546E528F54A1D00BCECB2 /* ToastAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlertView.swift; sourceTree = "<group>"; };
 		3E2546E728F54A2B00BCECB2 /* ToastAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastAlertView.xib; sourceTree = "<group>"; };
 		3E2546EA28F55A9200BCECB2 /* FormViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewWorker.swift; sourceTree = "<group>"; };
+		3E673B1C29168024002BFF30 /* TextFieldTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableCell.swift; sourceTree = "<group>"; };
 		3E8A8FA328E4442300462DA3 /* FillForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FillForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E8A8FA628E4442300462DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E8A8FA828E4442300462DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				3E8A901428EC1F3500462DA3 /* CheckboxImageTableCell.swift */,
 				3E8A901628EC28E000462DA3 /* CheckboxTextImageTableCell.swift */,
 				3E2546DF28F031D000BCECB2 /* GalleryTableCell.swift */,
+				3E673B1C29168024002BFF30 /* TextFieldTableCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				3E8A901528EC1F3500462DA3 /* CheckboxImageTableCell.swift in Sources */,
 				3E8A8FE328E4748E00462DA3 /* ViewController.swift in Sources */,
 				3E8A900928E75A2B00462DA3 /* AppCoordinator.swift in Sources */,
+				3E673B1D29168024002BFF30 /* TextFieldTableCell.swift in Sources */,
 				3E8A900B28E98D3C00462DA3 /* CellTypeProtocol.swift in Sources */,
 				3E2546E328F541A000BCECB2 /* Constants.swift in Sources */,
 				3E8A8FAB28E4442300462DA3 /* FormViewController.swift in Sources */,

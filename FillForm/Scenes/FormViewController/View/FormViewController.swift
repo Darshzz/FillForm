@@ -157,21 +157,56 @@ extension FormViewController: UITableViewDelegate {
         
         if indexPath.section != 0 {
             let sectionCount = dataSource?.sectionModels.count ?? 0
+            
+            if (dataSource?.sectionModels[0].question.contains("alarm") ?? false) {
+                let item = dataSource?.sectionModels[indexPath.section].items[indexPath.row]
+                let cellHeight = CGFloat(item!.answer ? item!.cellHeight : Constants.defaultCellHeight)
+                
+                if let model = dataSource?.sectionModels[0].items[0], model.answer, indexPath.section == 1 {
+                    return cellHeight
+
+                }else if let model = dataSource?.sectionModels[0].items[1], model.answer, indexPath.section == 2 || indexPath.section == 3 {
+                    
+                    if indexPath.section == 3 {
+                        let model = dataSource?.sectionModels[2].items
+                        if model![0].answer || model![1].answer {
+                            if let item = dataSource?.sectionModels[3].items, item[indexPath.row].selectedOption == "1" {
+                                return CGFloat(item[indexPath.row].cellHeight)
+                            }
+                        }else if model![2].answer {
+                            if let item = dataSource?.sectionModels[3].items, item[indexPath.row].selectedOption == "2" {
+                                return CGFloat(item[indexPath.row].cellHeight)
+                            }
+                        }
+                        return 0
+                    }
+                    return cellHeight
+                }
+                return 0
+            }
+            
             guard sectionCount > 1, let model = dataSource?.sectionModels[0].items[0], model.answer else {
                 return 0
             }
         }
-        
+  
         guard let model = dataSource?.sectionModels[indexPath.section].items[indexPath.row], model.answer else {
-            return 45
+            return CGFloat(Constants.defaultCellHeight)
         }
-        return CGFloat(model.cellHeight ?? 45)
+        return CGFloat(model.cellHeight ?? Constants.defaultCellHeight)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         if section != 0 {
             let sectionCount = dataSource?.sectionModels.count ?? 0
+            
+            if let model = dataSource?.sectionModels[0].items[0], sectionCount > 2, model.answer {
+                return section <= 1 ? 30 : 0
+            }else if let model = dataSource?.sectionModels[0].items[1], sectionCount > 2, model.answer  {
+                return section == 2 ? 30 : 0
+            }
+            
             guard sectionCount > 1, let model = dataSource?.sectionModels[0].items[0], model.answer else {
                 return 0
             }

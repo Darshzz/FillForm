@@ -137,7 +137,11 @@ extension FormViewModel: ViewModelProtocol {
         var isvalidated = false
 
         var errorMsg = ""
-        for section in formModel.value[currentFormIndex] {
+        for (index, section) in formModel.value[currentFormIndex].enumerated() {
+            
+            let model = formModel.value[currentFormIndex][0]
+            if model.items[0].answer, index > 1 { break }
+            else if formModel.value[currentFormIndex].count > 1, model.items[1].answer, index == 1 { continue }
             
             let items = section.items
             

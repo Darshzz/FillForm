@@ -64,6 +64,8 @@ class FormModel: Codable {
         var isImage: Bool!
         var title: String?
         var keyboardType: Int!
+        var isDateTimePicker: Bool = false
+        var selectedOption: String?
         
         var uuid: UUID = UUID()
         typealias Identity = UUID
@@ -83,6 +85,9 @@ class FormModel: Codable {
             isImage = (data["isImage"] as? Bool) ?? false
             title = data["title"] as? String
             keyboardType = data["keyboardType"] as? Int ?? 0
+            
+            selectedOption = data["selectedOption"] as? String
+            isDateTimePicker = (data["isDateTimePicker"] as? Bool) ?? false
         }
         
         static func ==(lhs: Answers, rhs: Answers) -> Bool {

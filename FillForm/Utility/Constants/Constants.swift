@@ -28,5 +28,6 @@ struct Constants {
     static let submit = "Submit"
     
     static let minImageCount = 3
+    static let defaultCellHeight = 45
 }
 

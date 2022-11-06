@@ -20,7 +20,7 @@ class ProgressView: XibContainer {
     }
     
     func next() {
-        if currentIndex == 5 { return }
+        if currentIndex == checkmarks.count - 1 { return }
         
         // Set checkmark image
         configureCheckmarks(true)
