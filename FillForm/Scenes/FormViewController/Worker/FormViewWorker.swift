@@ -27,25 +27,77 @@ extension FormViewWorker {
                 
                 let answers = model.items.filter({ $0.answer })
                 var items: [Any] = []
-                answers.forEach { model in
-                    if model.cellType == Constants.galleryCellType {
+                
+                if section.count > 2, !answers.isEmpty {
+                    let subQuestions = section[3].items.filter({ $0.selectedOption!.contains(answers.first!.selectedOption ?? "0") })
+                    
+                    var subQuestionItem: [Any] = []
+                    subQuestions.forEach { subItem in
+                        subQuestionItem.append(["subAnswer": subItem.answer,
+                                                "subQuestion": subItem.question])
+                    }
+                    
+                    items.append(["answer": answers.first!.answer ? "yes":"no",
+                           "question": answers.first!.question])
+                    
+                    if !subQuestionItem.isEmpty {
+                        items.append(["subQuestionAnswers": subQuestionItem])
+                    }
+                    
+                }else {
+                
+                answers.forEach { item in
+                    if item.cellType == Constants.galleryCellType {
                         images.enumerated().forEach { (index, image) in
-                            items.append(["answer": model.answer ? "yes":"no",
+                            items.append(["answer": item.answer ? "yes":"no",
                                    "question": "Picture\(index + 1)",
                                    "base64ImageString": image.resizeImage()!.base64()])
                         }
                     }else {
-                        items.append(["answer": model.answer ? "yes":"no",
-                               "question": model.question,
-                               "subAnswer": model.subAnswer!,
-                               "subQuestion": model.subQuestion!,
-                               "base64ImageString": model.base64ImageString!])
+                        items.append(["answer": item.answer ? "yes":"no",
+                               "question": item.question,
+                               "subAnswer": item.subAnswer!,
+                               "subQuestion": item.subQuestion!,
+                               "base64ImageString": item.base64ImageString!])
                     }
                 }
-                selectedAnswer.append(["answers": items,
-                                       "question": model.question])
+                }
+                
+                if !items.isEmpty {
+                    selectedAnswer.append(["answers": items,
+                                           "question": model.question])
+                }
             }
         }
         return ["questionAnswers": selectedAnswer]
     }
 }
+/*
+ {
+   "answers": [
+     {
+       "answer": "yes",
+       "question": "Fault ticket assigned to technician",
+       "subQuestionAnswers": [
+         {
+           "subAnswer": "Vijay ",
+           "subQuestion": "Name of technician"
+         },
+         {
+           "subAnswer": "8235",
+           "subQuestion": "Contact number of technician"
+         },
+         {
+           "subAnswer": "fhgg",
+           "subQuestion": "Technician job number"
+         },
+         {
+           "subAnswer": "9/11/2022 12:0 AM",
+           "subQuestion": "Date and time of fault ticket assigned to technician"
+         }
+       ]
+     }
+   ],
+   "question": "How was the vandalism discovered?"
+ }
+ */

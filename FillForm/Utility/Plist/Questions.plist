@@ -1664,7 +1664,7 @@
 					<key>option</key>
 					<string>Fault ticket assigned to technician</string>
 					<key>selectedOption</key>
-					<string>No</string>
+					<string>1</string>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -1674,7 +1674,7 @@
 					<key>option</key>
 					<string>Vandalism discovered by technician</string>
 					<key>selectedOption</key>
-					<string>No</string>
+					<string>1</string>
 				</dict>
 				<dict>
 					<key>cellHeight</key>
@@ -1684,7 +1684,7 @@
 					<key>option</key>
 					<string>Suspicious activity reported</string>
 					<key>selectedOption</key>
-					<string>No</string>
+					<string>2</string>
 				</dict>
 				<dict>
 					<key>cellHeight</key>

@@ -13,6 +13,7 @@ class OtherRadioTextFieldTableCell: UITableViewCell {
     // MARK: Properties
     @IBOutlet weak var imgViewRadio: UIImageView!
     @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     var indexPath: IndexPath!
@@ -42,6 +43,7 @@ extension OtherRadioTextFieldTableCell: CellTypeProtocol {
         self.model = model
         
         labelText.text = model.question
+        labelTitle.text = model.title
         textField.text = model.subAnswer
         textField.placeholder = model.subQuestion
         textField.keyboardType = UIKeyboardType(rawValue: model.keyboardType)!

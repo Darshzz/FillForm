@@ -307,6 +307,7 @@
                                         <connections>
                                             <outlet property="imgViewRadio" destination="8wb-lp-Tep" id="fz6-VD-sXa"/>
                                             <outlet property="labelText" destination="LxU-Od-F06" id="5uj-Go-SZO"/>
+                                            <outlet property="labelTitle" destination="k7B-2b-84s" id="Nhg-xr-Osm"/>
                                             <outlet property="textField" destination="YDm-I9-jK7" id="oGy-e9-sEy"/>
                                         </connections>
                                     </tableViewCell>
