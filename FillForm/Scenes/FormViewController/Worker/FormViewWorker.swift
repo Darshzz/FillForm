@@ -33,15 +33,17 @@ extension FormViewWorker {
                     
                     var subQuestionItem: [Any] = []
                     subQuestions.forEach { subItem in
-                        subQuestionItem.append(["subAnswer": subItem.answer,
-                                                "subQuestion": subItem.question])
+                        subQuestionItem.append(["subAnswer": subItem.subAnswer,
+                                                "subQuestion": subItem.subQuestion])
                     }
                     
-                    items.append(["answer": answers.first!.answer ? "yes":"no",
-                           "question": answers.first!.question])
-                    
                     if !subQuestionItem.isEmpty {
-                        items.append(["subQuestionAnswers": subQuestionItem])
+                        items.append(["answer": answers.first!.answer ? "yes":"no",
+                               "question": answers.first!.question,
+                                "subQuestionAnswers": subQuestionItem])
+                    }else {
+                        items.append(["answer": answers.first!.answer ? "yes":"no",
+                               "question": answers.first!.question])
                     }
                     
                 }else {
